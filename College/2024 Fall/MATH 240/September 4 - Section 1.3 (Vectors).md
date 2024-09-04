@@ -1,16 +1,23 @@
 Vectors in $\mathbb{R}^n$ (vectors in n-dimensional space)
-	Let $\mathbb{R}$ denote the set of real numbers
-	Let $\mathbb{R}^n$ denote n-dimensional space
-	Let $(x_{1}, x_{2} \dots, x_{n})$ denote a point in $\mathbb{R}^n$
-	Let $[x_{1}, x_{2}, \dots, x_{n}]$ denote a vector in $\mathbb{R}^n$. We will also use vertical brackets.
-	Definition. Let u, v be vectors in R^n and let $S\in\mathbb{R}$ (a scalar)
+-  Let $\mathbb{R}$ denote the set of real numbers
+- Let $\mathbb{R}^n$ denote n-dimensional space
+- Let $(x_{1}, x_{2} \dots, x_{n})$ denote a point in $\mathbb{R}^n$
+- Let $[x_{1}, x_{2}, \dots, x_{n}]$ denote a vector in $\mathbb{R}^n$. We will also use vertical brackets.
+- Definition. Let u, v be vectors in R^n and let $S\in\mathbb{R}$ (a scalar)
 
 Vector addition:
+
 $u+v = [u_{1}+v_{1}, u_{2}+v_{2}, \dots, u_{n}+v_{n}]$
+
+Vector subtraction:
+
 $u-v = [u_{1}-v_{1}, u_{2}-v_{2}, \dots, u_{n}-v_{n}]$
+
+Vector multiplication:
+
 $s\times u = [s*u_{1}, s*u_{2}, \dots s*u_{n}]$
 
-Multiplying a vector by a scalar does not change the direction (negative can flip it)
+** Multiplying a vector by a scalar does not change the direction (negative can flip it)**
 
 The *magnitude* or *length* of a vector $u$ in $\mathbb{R}^n$ is the distance from $(0, 0,\dots, 0)$ to $(u_{1}, u_{2}, \dots, u_{n})$, which is $\sqrt{ u_{1}^2 + u_{2}^2 + \dots +u_{n}^2 }$ (by Pythagoras theorem). **It is denoted by $||u||$.**
 
@@ -18,12 +25,13 @@ The *magnitude* or *length* of a vector $u$ in $\mathbb{R}^n$ is the distance fr
 $||u+v|| \ne ||u|| + ||v||$, but $||2u|| = 2||u||$
 
 ## Properties of vector addition, subtraction and scalar multiplication
+
 Let $u, v, w$ be vectors in $\mathbb{R}^n$ and $c, d, \in \mathbb{R}$ be scalars.
-Let $O = [0, 0, \dots, 0]$
+Let $0 = [0, 0, \dots, 0]$
 1. $u+v = v+u$                          -> Addition is Commutative
 2. $u + (v+w) = (u+v) + w$     -> Addition is Associative
-3. $u+O = u$                               -> The Additive Identity
-4. $u+ -1*u = O$                       -> Inverse Addtiive Identity
+3. $u+0 = u$                                -> The Additive Identity
+4. $u+ -1*u = 0$                        -> Inverse Additive Identity
 5.  $c * (u + v) = c * u + c * v$      -> The Distributive Law
 6. $(c+d) * u=c*u+d*u$      -> Also the Distributive Law
 7. $(c*d)u = c*(du)$                  -> Grouping Law

@@ -3,5 +3,6 @@
   "obsidian-tasks-plugin",
   "obsidian-excalidraw-plugin",
   "obsidian-git",
-  "obsidian-latex-suite"
+  "obsidian-latex-suite",
+  "obsidian-relative-line-numbers"
 ]

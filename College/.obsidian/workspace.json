@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Welcome.md",
+                "file": "2024 Fall/MATH 240/September 4 - Section 1.3 (Vectors).md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Welcome.md",
+                "file": "2024 Fall/MATH 240/September 4 - Section 1.3 (Vectors).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "2024 Fall/MATH 240/September 4 - Section 1.3 (Vectors).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md"
+                "file": "2024 Fall/MATH 240/September 4 - Section 1.3 (Vectors).md"
               }
             }
           }
@@ -153,9 +153,10 @@
   },
   "active": "1bbf91af36861ad6",
   "lastOpenFiles": [
-    "2024 Fall/MATH 240/September 4 - Section 1.3 (Vectors).md",
     "2024 Fall/MATH 240/MATH 240 Course Breakdown.jpg",
+    "2024 Fall/MATH 240/September 4 - Section 1.3 (Vectors).md",
     "2024 Fall/MATH 240/MATH 240 - Linear Algebra I.md",
+    "Welcome.md",
     "2024 Fall/MATH 240/Assignments/MATH 240 Assignment 1.pdf",
     "2024 Fall/MATH 240/Assignments",
     "IMG_3115.heic",
@@ -170,7 +171,6 @@
     "2024 Fall",
     "Untitled 1.canvas",
     "Untitled.canvas",
-    "Welcome.md",
     "create a link.md"
   ]
 }
