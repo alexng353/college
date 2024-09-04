@@ -1,0 +1,162 @@
+{
+  "main": {
+    "id": "767eefaaca3e7099",
+    "type": "split",
+    "children": [
+      {
+        "id": "9c52242d4273fb3e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1bbf91af36861ad6",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fdb834ac9a01f708",
+    "type": "split",
+    "children": [
+      {
+        "id": "2e215fa1286aeb75",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "65ccf73b826bd68c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "506e40f9cc4dac92",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6236ffa216bdbaab",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3010d5a5fe8ba1bb",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb340f589646e02c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "698214883b8000c3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "736b294e45134aef",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cd54061d2982959e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "a24ff587c7b3aaa2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "1bbf91af36861ad6",
+  "lastOpenFiles": [
+    "2024 Fall/MACM 101/MACM 101 - Discrete Math I.md",
+    "2024 Fall/MATH 240/MATH 240 - Linear Algebra I.md",
+    "2024 Fall/CMPT 125/CMPT 125 - Intro to CS & Programming II.md",
+    "2024 Fall/CMPT 105w/CMPT 105w - Communications.md",
+    "2024 Fall/2024 Fall.md",
+    "2024 Fall/CMPT 125",
+    "2024 Fall/CMPT 105w",
+    "2024 Fall/MATH 240",
+    "2024 Fall/MACM 101",
+    "2024 Fall",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "Welcome.md",
+    "create a link.md"
+  ]
+}
