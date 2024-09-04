@@ -33,8 +33,9 @@ Let $O = [0, 0, \dots, 0]$
 > You **MUST** use a property of real numbers in the proof (that *is* the proof.)
 
 Property 1 $\to$ Addition is Commutative
-$$
 ```math
+
+$$
 \begin{align}
 u+v &= [u_{1},u_{2},\dots,u_{n}] + [v_{1},v_{2},\dots,u_{n}] \\
 &= [u_{1}+v_{1},u_{2}+v_{2},\dots,u_{n}+v_{n}] \to \text{by the definition of vector addition}\\
@@ -42,8 +43,8 @@ u+v &= [u_{1},u_{2},\dots,u_{n}] + [v_{1},v_{2},\dots,u_{n}] \\
 &=[v_{1},v_{2},\dots,v_{n}] + [u_{1},u_{2},\dots,u_{n}] \to \text{by the definition of vector addition} \\
 &= v + u
 \end{align}
-```
 $$
+```
 
 Property 6 -> The Distributive Law.
 
