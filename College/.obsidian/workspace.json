@@ -11,9 +11,12 @@
             "id": "1bbf91af36861ad6",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "2024 Fall/MATH 240/Assignments/Chapter 1.1/MATH 240 C1.1 Homework (Paged).pdf"
+                "file": "2024 Fall/MATH 240/MATH 240 Lecture x.x - Friday September 6.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -83,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 Fall/MATH 240/Assignments/Chapter 1.1/MATH 240 C1.1 Homework (Paged).pdf",
+                "file": "2024 Fall/MATH 240/MATH 240 Lecture x.x - Friday September 6.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 Fall/MATH 240/Assignments/Chapter 1.1/MATH 240 C1.1 Homework (Paged).pdf",
+                "file": "2024 Fall/MATH 240/MATH 240 Lecture x.x - Friday September 6.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 Fall/MATH 240/Assignments/Chapter 1.1/MATH 240 C1.1 Homework (Paged).pdf"
+                "file": "2024 Fall/MATH 240/MATH 240 Lecture x.x - Friday September 6.md"
               }
             }
           }
@@ -150,26 +153,30 @@
   },
   "active": "1bbf91af36861ad6",
   "lastOpenFiles": [
-    "2024 Fall/MATH 240/Assignments/Chapter 1.1/MATH 240 C1.1 Homework.pdf",
-    "2024 Fall/MATH 240/Assignments/Chapter 1.1/MATH 240 C1.1 Homework (Paged).pdf",
+    "2024 Fall/MATH 240/MATH 240 Lecture 1.3 - Wednesday September 4 (Vectors).md",
+    "2024 Fall/MATH 240/MATH 240 Lecture x.x - Friday September 6.md",
     "2024 Fall/MATH 240/Assignments/Chapter 1.1/MATH 240 Assignment 1.pdf",
-    "2024 Fall/MATH 240/Assignments/Chapter 1.1",
-    "2024 Fall/CMPT 125/CMPT 125 - Intro to CS & Programming II.md",
-    "2024 Fall/MATH 240/September 4 - Section 1.3 (Vectors).md",
-    "2024 Fall/MATH 240/MATH 240 Course Breakdown.jpg",
+    "Untitled.md",
     "2024 Fall/MATH 240/MATH 240 - Linear Algebra I.md",
-    "2024 Fall/MATH 240/Definitions/Commutative.md",
-    "2024 Fall/MATH 240/Definitions",
-    "Welcome.md",
-    "2024 Fall/MATH 240/Assignments",
-    "IMG_3115.heic",
+    "2024 Fall/MATH 240/MATH 240 Course Breakdown.jpg",
+    "2024 Fall/MACM 101/Assignments/Section 1/MACM 101 Assignment 1 - Septmber 23.pdf",
+    "2024 Fall/MACM 101/Assignments/Section 1/MACM 101 Section 1.1.pdf",
+    "2024 Fall/MACM 101/MACM 101 Lecture 1.1 - Friday September 6.md",
+    "2024 Fall/MACM 101/MACM 101 Lecture 1.0 - Friday September 6.md",
+    "Pasted image 20240906100623.png",
     "2024 Fall/MACM 101/MACM 101 - Discrete Math I.md",
+    "2024 Fall/MACM 101/Assignments/Section 1/MACM 101 Section 1.8 Supplemental.pdf",
+    "2024 Fall/MACM 101/Assignments/Section 1/1715789569_831__Rosen_Problems_8Ed_Section_1.2.pdf",
+    "2024 Fall/MACM 101/Assignments/Section 1/MACM 101 Section 1.2.pdf",
+    "2024 Fall/MACM 101/Assignments/Section 1/MACM 101 Section 1.3.pdf",
+    "2024 Fall/MACM 101/Assignments/Section 1/MACM 101 Section 1.4.pdf",
+    "2024 Fall/MACM 101/Assignments/Section 1/MACM 101 Section 1.5.pdf",
+    "2024 Fall/MACM 101/Assignments/Section 1/MACM 101 Section 1.6.pdf",
+    "2024 Fall/CMPT 125/CMPT 125 - Intro to CS & Programming II.md",
+    "2024 Fall/MATH 240/Definitions/Commutative.md",
+    "Welcome.md",
     "2024 Fall/2024 Fall.md",
     "2024 Fall/CMPT 105w/CMPT 105w - Communications.md",
-    "2024 Fall/CMPT 125",
-    "2024 Fall/CMPT 105w",
-    "2024 Fall/MATH 240",
-    "2024 Fall/MACM 101",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "create a link.md"
