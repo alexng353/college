@@ -27,9 +27,9 @@ Vector subtraction:
 
 $u-v = [u_{1}-v_{1}, u_{2}-v_{2}, \dots, u_{n}-v_{n}]$
 
-Vector multiplication:
+Scalar vector multiplication:
 
-$s\times u = [s \cdot u_{1}, s\cdot u_{2}, \dots s\cdot u_{n}]$
+$s \cdot u = [s \cdot u_{1}, s\cdot u_{2}, \dots s\cdot u_{n}]$
 
 ** Multiplying a vector by a scalar does not change the direction (negative can flip it)**
 
@@ -79,3 +79,14 @@ $$
 \end{align*}
 $$
 
+Property 9 -> Subtraction (???)
+$$
+\begin{align}
+ u-v &= u + (-1) \cdot v \\
+ &=  [u_{1}, u_{2}, ..., u_{n}] + (-1) \cdot [v_{1}, v_{2}, ..., v_{n}] \\
+&= u + (-1) \cdot [v_{1}, v_{2}, ..., v_{n}] \\
+&= u + [(-1) \cdot v_{1}, (-1) \cdot v_{2}, ...,(-1) \cdot v_{n}] \to \text{By scalar vector multiplication} \\
+&= u -v
+
+\end{align}
+$$
