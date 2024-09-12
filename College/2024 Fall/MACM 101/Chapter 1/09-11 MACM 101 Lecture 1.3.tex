@@ -1,8 +1,95 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+
 \begin{document}
 
-\begin{center}
-\Huge
-MACM 101 Lecture 1.3
-\end{center}
+\section{Implication}
+
+\begin{equation}
+  \neg q \implies \neg p
+\end{equation}
+
+\begin{equation}
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+p & q & \neg p & \neg q & p \implies q & \neg q \implies \neg p \\
+\hline
+0 & 0 & 1 & 1 & 1 & 1 \\
+0 & 1 & 1 & 0 & 1 & 1 \\
+1 & 0 & 0 & 1 & 0 & 0 \\
+1 & 1 & 0 & 0 & 1 & 1 \\
+\hline
+\end{array}
+\end{equation}
+
+\[
+  \therefore p \implies q \text{ is logically equivalent to } \neg q \implies \neg p
+\]
+
+So, $\neg q \implies \neg p$ is the \textbf{contrapositive} of $p \implies q$. 
+
+$p \implies q$ \textbf{material implication}
+
+$q \implies p$ is called the \textbf{converse} of material implication.
+
+$(\neg q \implies \neg p)$ is called the \textbf{contrapositive} of material implication, and
+
+$(\neg p \implies \neg q)$ is called the \textbf{inverse} of material implication.
+
+\section{First Identity}
+
+$p \implies q$ means $p \therefore q$. 
+
+If the argument is valid and $p$ is true, then $q$ is also true.
+
+If the argument is valid and $p$ is false, then we can conclude nothing about $q$.
+
+Thus, $p \implies q$ is logically equivalent to $\neg p \lor q$.
+
+
+\begin{equation}
+\begin{array}{|c|c|c|c|c|}
+\hline
+p & q & \neg p & p \implies q & \neg p \lor q \\
+\hline
+0 & 0 & 1 & 1 & 1 \\
+0 & 1 & 1 & 1 & 1 \\
+1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 1 & 1 \\
+\hline
+\end{array}
+\end{equation}
+
+
+This is known as \textbf{implication reduction}.
+
+\begin{quote}
+    This is important because we \textit{always} want to remove implication from our logical statements.
+\end{quote}
+
+\section{De Morgan's Laws}
+
+\begin{equation}
+  \neg (p \land q) \equiv \neg p \lor \neg q
+\end{equation}
+
+\begin{equation}
+  \neg (p \lor q) \equiv \neg p \land \neg q
+\end{equation}
+
+\textbf{Many of the Axiomatic Laws come in pairs (principle of duality)}
+
+\begin{quote}
+    Show the truth table (exercise)
+\end{quote}
+
+\textbf{Propositional Identities are given on the exam.}
+
+\section{Principle of Duality}
+\begin{quote}
+    (exercise for the reader (???))
+\end{quote}
 
 \end{document}
