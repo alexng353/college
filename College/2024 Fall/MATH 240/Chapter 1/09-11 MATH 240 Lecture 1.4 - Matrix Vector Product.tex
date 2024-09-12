@@ -1,0 +1,258 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+
+\begin{document}
+
+\title{MATH 240 Lecture 1.4 - The Matrix Vector Product $Ax$}
+\author{Alexander Ng}
+\date{September 11, 2024}
+
+\maketitle
+
+\section{Matrices}
+
+An \( m \times n \) matrix is a rectangular array of numbers with \( m \) rows
+and \( n \) columns.
+
+\subsection{Example}
+
+\begin{minipage}{0.3\textwidth}
+  \centering
+  \( 2 \times 3 \) matrix
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+  \begin{equation}
+    \begin{bmatrix}
+      1 & 1 & 1 \\
+      1 & 2 & 3
+    \end{bmatrix}
+  \end{equation}
+\end{minipage}
+
+\subsection{Definition}
+
+Let \( A \) be an \( m \times n \) matrix with columns \( v_{1}, v_{2},\ldots ,
+v_{n} \in \mathbb{R}^{n} \). Then the matrix product \( Av_{1} \) is defined as
+
+$$
+  A \cdot x = x_{1} \cdot v_{1} + x_{2} \cdot v_{2} + \ldots + x_{n} \cdot v_{n} \in \mathbb{R}^{m}
+$$
+
+  \begin{align}
+    \begin{bmatrix}
+      1 & 1 & 1 \\
+      1 & 2 & 3
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix}
+      1 \\
+      2 \\
+      3
+    \end{bmatrix}
+    &=
+    1 \cdot \begin{bmatrix}
+      1 \\
+      1
+    \end{bmatrix}
+    +
+    2 \cdot \begin{bmatrix}
+      1 \\
+      2
+    \end{bmatrix}
+    +
+    3 \cdot \begin{bmatrix}
+      1 \\
+      3
+    \end{bmatrix} \\
+    &= \begin{bmatrix} 
+      1 \\ 1
+    \end{bmatrix} 
+    + \begin{bmatrix}
+      2 \\ 4
+    \end{bmatrix}
+    + \begin{bmatrix}
+      3 \\ 9
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+      6 \\ 14
+    \end{bmatrix}
+  \end{align}
+
+Through some algebraic reasoning, we can show that this matrix product follows:
+
+Letting $v$ be the vector $\begin{pmatrix} x & y & z \end{pmatrix}$, we have
+
+\begin{align}
+  \begin{bmatrix}
+    a & b & c \\ d & e & f 
+  \end{bmatrix}
+  \times
+  v 
+  &=
+  \begin{bmatrix}
+    a & b & c \\
+    d & e & f 
+  \end{bmatrix}
+  \times
+  \begin{bmatrix}
+    x \\ y \\ z
+  \end{bmatrix} \\
+  &= 
+  x \cdot \begin{bmatrix} a \\ d \end{bmatrix}
+  + y \cdot \begin{bmatrix} b \\ e \end{bmatrix}
+  + z \cdot \begin{bmatrix} c \\ f \end{bmatrix} \\
+  &=
+  \begin{bmatrix}
+    ax + by + cz \\
+    dx + ey + fz
+  \end{bmatrix} \\
+  &=
+  \begin{bmatrix}
+    R_{1} \cdot v \\
+    R_{2} \cdot v
+  \end{bmatrix}
+\end{align}
+
+Where \( \cdot \) denotes the \underline{matrix dot product}.
+
+\subsection{The Matrix Dot Product}
+
+The \underline{matrix dot product} \( u \cdot v \) is defined as
+
+\begin{equation}
+  u \cdot v = u_{1} \cdot v_{1} + u_{2} \cdot v_{2} + \ldots + u_{n} \cdot v_{n}
+\end{equation}
+
+\subsubsection{Example}
+
+\begin{equation}
+  \begin{bmatrix} 1 & 1 \\ 1 & 2 \end{bmatrix}
+  \cdot
+  \begin{bmatrix} 4 \\ 5 \end{bmatrix} 
+  =
+  \begin{bmatrix} 
+    1 \cdot 4 + 1 \cdot 5 = 9 \\
+    1 \cdot 4 + 2 \cdot 5 = 14
+  \end{bmatrix} 
+\end{equation}
+
+\subsection{Matrix Scalar Multiplication}
+
+If $A$ is an $m \times n$ matrix with rows $r_{1}, r_{2}, \dots, r_{m}$, then
+
+\begin{equation}
+  A \cdot x = 
+  \begin{bmatrix} 
+    r_{1} \cdot x \\
+    r_{2} \cdot x \\
+    \vdots \\
+    r_{m} \cdot x
+  \end{bmatrix}
+\end{equation}
+
+\subsection{Permutation Matrices}
+
+\subsubsection{Definition}
+
+A \underline{permutation matrix} is a square binary matrix that represents
+a permutation of elements. Each row and column of a permutation matrix contains
+exactly one $1$, with all other entries being $0$.
+
+\subsubsection{Basis Matrix in $\mathbb{R}^{3}$}
+
+This is the identity matrix in $\mathbb{R}^{3}$ (denoted by $I_{3}$). When you 
+multiply any $v \in \mathbb{R}^{3}$ by this matrix, you get the same vector back.
+
+\begin{equation}
+  \begin{bmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+  \end{bmatrix}
+\end{equation}
+
+Example:
+
+\begin{equation}
+  \begin{bmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix}
+    x \\ y \\ z
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    x \\ y \\ z
+  \end{bmatrix}
+\end{equation}
+
+This is the case because the first row of the matrix, corresponding to the first
+entry of the vector, is $\begin{pmatrix} 1 & 0 & 0 \end{pmatrix}$. 
+Taking the dot product of a vector with the first row of the matrix returns
+the first entry of the vector.
+
+Following, the second row is $\begin{pmatrix} 0 & 1 & 0 \end{pmatrix}$,
+and the third row is $\begin{pmatrix} 0 & 0 & 1 \end{pmatrix}$.
+
+Therefore, the first entry of the vector is $x$, the second entry is $y$,
+and the third entry is $z$.
+
+\subsubsection{Permuting Rows of a Vector (Example)}
+
+\begin{equation}
+  \begin{bmatrix}
+    0 & 0 & 1 \\
+    0 & 1 & 0 \\
+    1 & 0 & 0
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix}
+    x \\ y \\ z
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    z \\ y \\ x
+  \end{bmatrix}
+\end{equation}
+
+If you take the vector $\begin{pmatrix} x & y & z \end{pmatrix}$ and multiply 
+it by the first row of the matrix according to the matrix dot product, you get
+
+\begin{equation}
+  \begin{bmatrix}
+    0 & 0 & 1 \\
+    0 & 1 & 0 \\
+    1 & 0 & 0
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix}
+    x \\ y \\ z
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    0 \cdot x + 0 \cdot y + 1 \cdot z \\
+    \vdots \\
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    z \\
+    \vdots \\
+  \end{bmatrix}
+\end{equation}
+
+Following, you can see how the second row of the matrix leaves only the $y$ and
+the third row leaves only the $x$ components.
+
+\end{document}

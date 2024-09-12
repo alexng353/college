@@ -43,7 +43,7 @@ RREF matrix only.
     1 & 1 & 0 \\
     0 & 0 & 2
   \end{bmatrix} 
-.\] 
+\] 
 
 This gives us $x+y = 0$ and $0=2$.
 
@@ -53,7 +53,7 @@ If we take $ R_2 := \frac{1}{2} R_2$, we get the RREF matrix
     1 & 1 & 0 \\
     0 & 0 & 1
   \end{bmatrix}
-.\]
+\]
 
 This gives us $x+y = 0$ and $0=1$.
 
@@ -66,7 +66,8 @@ an augmented matrix in REF has a pivot
 
 \subsection{Avoiding Fractions}
 
-Generally, we want to avoid fractions at all costs.
+Generally, we want to avoid fractions at all costs, as they are notoriously
+difficult to work with.
 
 \subsubsection{Example [Avoiding Fractions]}
 
@@ -82,6 +83,7 @@ Given the matrix
 We can reduce in two paths.
 
 The first path begins as follows
+
 \[
   \begin{bmatrix}
     3 & 2 & 1 \\
@@ -94,8 +96,9 @@ The first path begins as follows
   \end{bmatrix}
 \]
 
-This leaves us with some nasty fractions. Instead, if we first swap $R_1$ and 
-$R_2$, we get
+Despite the fact that this is completely valid and will eventually result in
+the same RREF matrix, it leaves us with some nasty fractions. Instead, if we
+first swap $R_1$ and $R_2$, we get
 
 \[
   \begin{align}
