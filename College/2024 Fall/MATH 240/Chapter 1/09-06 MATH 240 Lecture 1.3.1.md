@@ -72,9 +72,7 @@ We can use this transformation to prove a linear system
 
 $$
 \begin{bmatrix}
-3 \\
-4 \\
-5
+3 \\4 \\5 \\
 \end{bmatrix}
 =
 \begin{bmatrix}
@@ -84,38 +82,26 @@ x+2y+z \\
 \end{bmatrix}
 =
 \begin{bmatrix}
-x \\
-2x \\
-0
+x \\2x \\0
 \end{bmatrix}
 +
 \begin{bmatrix}
-2y \\
--3y \\
-y
+2y \\-3y \\y
 \end{bmatrix}
 +
 \begin{bmatrix}
-z \\
-0 \\
-z
+z \\0 \\z
 \end{bmatrix}
 =
 x\begin{bmatrix}
-1 \\
-2 \\
-0
+1 \\2 \\0
 \end{bmatrix}
 y\begin{bmatrix}
-2 \\
--3 \\
-1
+2 \\-3 \\1
 \end{bmatrix}
 +
 z\begin{bmatrix}
-1 \\
-0 \\
-1
+1 \\0 \\1
 \end{bmatrix}
 $$
 ## Definition

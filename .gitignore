@@ -1,0 +1,29 @@
+# LaTeX intermediate files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.bbl
+*.blg
+*.dvi
+*.ps
+*.xdv
+
+# Temporary files
+*~
+*.bak
+*.tmp
+
+# Editor-specific files
+.DS_Store
+.vscode/
+.idea/
+*.swp
