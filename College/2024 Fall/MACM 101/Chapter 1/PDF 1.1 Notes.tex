@@ -1,0 +1,145 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+
+\begin{document}
+
+\title{MACM 101 Lecture 1.1}
+\author{Alexander Ng}
+\date{Friday, September 13, 2024}
+
+\maketitle
+
+\section{Chapter Summary}
+
+\begin{itemize}
+  \item Propositional Logic
+    \subitem The Language of Propositions
+    \subitem Applications
+    \subitem Logical Equivalences and Implication
+    \subitem The Laws of Propositional Logic
+
+  \item Predicate Logic
+    \subitem The Language of Quantifiers
+    \subitem Nested Quantifiers
+
+  \item Proofs
+    \subitem Rules of Inference
+    \subitem Proof Methods
+    \subitem Proof Strategy
+\end{itemize}
+
+This document covers everything from Rosen 1.0 to 1.3.
+
+\section{Definitions}
+
+
+\subsection{Deduction/Deductive Logic}
+
+Deduction is the process of deriving a conclusion from a given set of axioms 
+or premises. In Logic, we start from the ground (axioms) and work our way up to
+the conclusion.
+
+\subsection{Truth Value}
+
+A truth value can be either true or false, but not both. This comes from the
+\textit{principium tertii eclusi} of Aristotle.
+
+\subsubsection{True and False}
+
+We will use 0 and 1 to denote true and false, respectively.
+
+\subsubsection{Unknown Truth Value}
+
+The proposition $u$ is \textit{unknown truth value}.
+
+\subsection{Proposition}
+
+A proposition is a declarative sentence (or statement) that possesses truth value.
+
+\subsubsection{Notation}
+
+Lowercase letters denote primitive propositions, and uppercase letters denote
+complex propositions.
+
+Primitive propositions are:
+
+\begin{itemize}
+\item Propositions that cannot be decomposed into anything simpler
+\item $p: 3 + 5 = 8$
+\item $q: \text{It is raining}$
+\end{itemize}
+
+\subsection{Examples of things that are not propositions}
+
+\begin{itemize}
+\item $p:$ Sit down! $\to$ not a proposition because it is not a declarative
+\item $q:$ The statement you are reading is now false. $\to$ not a proposition
+  because it is a contradiction.
+\item $r:$ The number $x$ is an integer. $\to$ not a proposition because it 
+  contains an unspecified variable, which means it's truth value cannot be
+  definitively determined without additional information.
+\end{itemize}
+
+\subsection{Syntactics and Semantics}
+
+Syntatic reasoning is what can be shown. 
+
+Syntax ~= grammar (rules of sentance construction), the structure of propositions
+
+Semantics reasoning is what is true
+
+Semantics ~= meaning (truth value), the truth value/tables of propositions
+
+\subsection{Literals}
+
+A \textit{literal} is either a primitive proposition or its negation (some
+textbooks use ~ to denote a literal)
+
+\section{Operator Syntax}
+
+\begin{enumerate}
+  \item Negation - $\neg$ \\
+    $q:$ it is raining, $\neg q:$ it is not raining\\
+  Everything in this list other than $\neg $  is known as a \textit{logical connective}
+  \item Conjunction - $\land$ - Logical and\\
+    $p \land q:$ it is raining and it is sunny \\
+    $p \land \neg q:$ it is raining and it is not sunny
+  \item Disjunction - $\lor$ - Inclusive Or\\
+    $p \lor q:$ it is raining or it is sunny \\
+    $p \lor \neg q:$ it is raining or it is not sunny
+  \item Disjunction - $\oplus$ - Exclusive Or\\
+    $p \oplus q:$ it is raining xor it is sunny \\
+    $p \oplus \neg q:$ it is raining xor it is not sunny\\
+    XOR is generally what is meant in english s\entences like "the meal comes
+    with either soup or salad"
+  \item Implication - $\to$ - "If, then"
+  \item Biconditional - $\leftrightarrow$ - "If and only if"
+\end{enumerate}
+
+Nobody knows why OR and XOR are both called Disjunction
+
+All propositions formed with logical connectives are called \textit{compound propositions},
+as opposed to \textit{primitive propositions}
+
+Compound propositions need not have causal
+relations between atomic components (they
+can sound nonsensical and still be valid) –
+material implication as opposed to causal
+implication, which lacks temporal ordering. (straight from the slides, p. 34)
+
+\section{Semantics}
+
+TRUTH TABLES. that's basically all semantics is
+
+End at PDF 1.1 page 37
+
+\end{document}

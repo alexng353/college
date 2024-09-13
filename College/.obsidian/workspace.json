@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024 Fall/CMPT 125/09-12 CMPT 125 Lecture.md",
+                "file": "2024 Fall/MACM 101/Chapter 1/Propositional Identities (memorize).md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 Fall/CMPT 125/09-12 CMPT 125 Lecture.md",
+                "file": "2024 Fall/MACM 101/Chapter 1/Propositional Identities (memorize).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 Fall/CMPT 125/09-12 CMPT 125 Lecture.md",
+                "file": "2024 Fall/MACM 101/Chapter 1/Propositional Identities (memorize).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 Fall/CMPT 125/09-12 CMPT 125 Lecture.md"
+                "file": "2024 Fall/MACM 101/Chapter 1/Propositional Identities (memorize).md"
               }
             }
           },
@@ -162,22 +162,25 @@
   },
   "active": "36afcc62ebae7121",
   "lastOpenFiles": [
-    "2024 Fall/MATH 240/Chapter 1/09-04 MATH 240 Lecture 1.3 - Vectors.md",
+    "2024 Fall/MACM 101/Chapter 1/PDF 1.1 Notes.synctex(busy)",
+    "2024 Fall/MACM 101/Chapter 1/pdflatex83661.fls",
+    "2024 Fall/MACM 101/Chapter 1/pdflatex83567.fls",
+    "2024 Fall/MACM 101/Chapter 1/pdflatex83556.fls",
+    "2024 Fall/MACM 101/Chapter 1/pdflatex83541.fls",
+    "2024 Fall/MACM 101/Chapter 1/pdflatex83526.fls",
+    "2024 Fall/MACM 101/Chapter 1/pdflatex83521.fls",
+    "2024 Fall/MACM 101/Chapter 1/pdflatex83514.fls",
+    "2024 Fall/MACM 101/Chapter 1/pdflatex83495.fls",
+    "2024 Fall/MACM 101/Chapter 1/pdflatex83490.fls",
+    "2024 Fall/MACM 101/Chapter 1/pdflatex83470.fls",
+    "Pasted image 20240913093712.png",
     "2024 Fall/CMPT 125/09-12 CMPT 125 Lecture.md",
+    "2024 Fall/MACM 101/Chapter 1/Propositional Identities (memorize).md",
+    "2024 Fall/MATH 240/Chapter 1/09-04 MATH 240 Lecture 1.3 - Vectors.md",
     "2024 Fall/MATH 240/Chapter 1/09-06 MATH 240 Lecture 1.3.1.md",
     "2024 Fall/MATH 240/Chapter 1/09-09 MATH 240 Lecture 1.1.md",
-    "2024 Fall/MATH 240/Chapter 1/09-11 MATH 240 Lecture 1.4 - Matrix Vector Product.pdf",
-    "2024 Fall/MATH 240/Chapter 1/09-11 MATH 240 Lecture 1.2 - RREF.pdf",
     "Pasted image 20240910155311.png",
     "2024 Fall/MACM 101/Chapter 1/09-11 MACM 101 Lecture 1.3.md",
-    "2024 Fall/MATH 240/Chapter 1/09-11 MATH 240 Lecture 1.4 - Matrix Vector Product.tex",
-    "2024 Fall/MACM 101/Chapter 1/09-11 MACM 101 Lecture 1.3.pdf",
-    "2024 Fall/MATH 240/Chapter 1/09-11 MATH 240 Lecture 1.2 - RREF.synctex(busy)",
-    "2024 Fall/MATH 240/Chapter 1/pdflatex54050.fls",
-    "2024 Fall/MATH 240/Chapter 1/pdflatex54022.fls",
-    "2024 Fall/MATH 240/Chapter 1/pdflatex54012.fls",
-    "2024 Fall/MATH 240/Chapter 1/pdflatex54005.fls",
-    "2024 Fall/MATH 240/Chapter 1/pdflatex54000.fls",
     "2024 Fall/MACM 101/Chapter 1/09-06 MACM 101 Lecture 1.0 - Friday September 6.md",
     "2024 Fall/MACM 101/Chapter 1/09-06->09-09 MACM 101 Lecture 1.1.md",
     "2024 Fall/MACM 101/Assignments/Assignment 1/MACM 101 C1.1 Homework.md",

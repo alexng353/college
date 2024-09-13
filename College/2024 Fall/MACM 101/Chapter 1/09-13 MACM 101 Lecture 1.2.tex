@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+
+\begin{document}
+
+\title{MACM 101 Lecture 1.2 - Inference and Valid Augmentation}
+\author{Alexander Ng}
+\date{September 13, 2024}
+
+\maketitle
+
+Prove that $xor \equiv (\iff)$
+
+exercise for the reader
+
+\section{Review (Propositional Identities)}
+
+\begin{equation}
+  p \lor (q \land r) \equiv (p \lor q) \land (p \lor r)
+\end{equation}
+
+\begin{equation}
+  p \land (q \lor r) \equiv (p \land q) \lor (p \land r)
+\end{equation}
+
+\caption{These two identities are known as the \textbf{Distributive Laws}}
+
+They come in a pair because of "Duality" (Research me)
+
+*Memorize all of the identities from C1.1 Lecture Slides p.90
+
+\subsection{Prove that XOR is Equivalent to IFF}
+
+$\dots$
+
+\section{Logical Implication and Valid Arguments}
+
+if $p \implies q$ and $q \implies p$, then $p \biconditional q$
+
+*No logic puzzles on the exam
+
+\section{Normal Forms}
+
+A system in which expressions of a formal language can be transformed according
+to a finite set of *rewrite rules* is called a reduction system.
+
+In Mathematics, computer science and logic, rewriting covers a wide range of
+methods of replacing subterms of a formula with other tierms.
+
+In abstract rewriting, an object is in 
+
+\subsection{CNF and DNF}
+
+Conjunctive Normal Form (CNF) is a conjunction of one or more clauses, where
+a clause is a disjunction of literals. It is an AND of ORs.
+
+Stated formally, if $A, \to$ is an abstract writing system, some $x \in A$ is
+in normal form if no $y \in A$ exists such that $x \to y$.
+
+Example:
+
+\begin{equation}
+(a \land \neg b) \lor c
+\end{equation}
+
+*Define "vacuously true" and "trivially true" (proofs ???)
+
+Stopped at Page 129. Read the entire fucking thing please.
+
+\end{document}
