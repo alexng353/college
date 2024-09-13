@@ -1,0 +1,290 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{enumitem}
+
+\begin{document}
+
+\title{MATH 240 Lecture 1.4\\The Matrix Equation $Ax=b$}
+\author{Alexander Ng}
+\date{September 13, 2024}
+
+\maketitle
+
+**The equation $Ax=b$ is very important
+
+\section*{Review}
+
+Let $A$ be an $m \times n$ matrix.
+
+Let $x$ be a vector of length $n$, with entries $x_{1}, x_{2}, \dots, x_{n}$.
+
+The definition of how to multiply a matrix by a vector is
+
+If $
+  A=\begin{bmatrix}
+    \vdots & \vdots & \vdots & \vdots \\
+    v_{1} & v_{2} & \dots & v_{n} \\
+    \vdots & \vdots & \vdots & \vdots \\
+  \end{bmatrix}
+$
+
+Then $
+  Ax = \begin{bmatrix}
+    x_1 \cdot v_{1} + x_2 \cdot v_{2} + \dots + x_n \cdot v_{n}
+  \end{bmatrix}
+$
+
+If $
+  A=\begin{bmatrix}
+    r_1\\r_2\\ 
+    \dots
+    \\r_m
+  \end{bmatrix}
+$
+
+Then $
+  Ax = \begin{bmatrix}
+    r_1 \cdot x\\
+    r_2 \cdot x\\
+    \dots\\
+    r_m \cdot x
+  \end{bmatrix}
+$
+
+\section{Th. 5: Properties of the matrix vector product}
+
+Let $A$ and $B$ be $m \times n$ matrices over $\mathbb{R}$, and 
+$u,v \in \mathbb{R}^{n}$ and $c\in\mathbb{R}$
+
+\begin{equation}
+  A(u+v) = Au + Av \to \text{Distributive law}
+  \label{eq:1}
+\end{equation}
+
+This implies that $A(u+v+w) = A(u+v) + A(w) = Au + Av + Aw$ because addition is
+commutative.
+
+\begin{equation}
+  A(c \cdot v) = c \cdot A \cdot v \to \text{Associative law}
+\end{equation}
+
+\begin{equation}
+  (A+B)\cdot u = Au + Bu \to \text{Distributive law}
+\end{equation}
+
+Proofs of the above properties will be tested on the exams.
+
+\subsection{Proving Property \ref{eq:1}}
+
+% \begin{align}
+%  a &=b \\
+%  c &=d
+% \end{align}
+
+
+% \begin{align}
+  % A(u+v) &= Au + Av
+  % A(u+v) &= A(\begin{bmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{bmatrix} 
+  % + \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}) \\
+
+  % &= \begin{bmatrix}
+  %   \vdots & \vdots & & \vdots \\
+  %   w_{1} & w_{2} & \dots & w_{n} \\
+  %   \vdots & \vdots & & \vdots
+  %   \end{bmatrix}
+  %
+    % \times
+    %
+    % \begin{bmatrix}
+    %   u_1 + v_1 \\
+    %   \vdots \\
+    %   u_n + v_n
+    % \end{bmatrix} \\
+
+% \end{align}
+
+\section{Four ways to represent a linear system}
+
+\noindent
+
+1. Standard Form
+\begin{align*}
+  2x_1 + 1x_2 &= 5 \\
+  1x_1 + 3x_3 &= 7 
+\end{align*}
+
+2. Augmented Matrix
+$$
+  \begin{bmatrix}
+    2 & 1 & 5 \\
+    1 & 3 & 7
+  \end{bmatrix}
+$$
+
+3. Vector Equation
+
+$x_1 \cdot v_1 + x_2 \cdot v_2 + \dots + x_n \cdot v_n = b$
+
+\begin{equation*}
+b=\begin{bmatrix} 5 \\ 7 \end{bmatrix} =
+\begin{bmatrix} 2x_1 + 1x_2 \\ 1x_1 + 3x_3 \end{bmatrix} =
+\begin{bmatrix} 2x_1 \\ x_1 \end{bmatrix} +
+\begin{bmatrix} 1x_2 \\ 0 \end{bmatrix} +
+\begin{bmatrix} 0 \\ 3x_3 \end{bmatrix} \\ = 
+x_1 \cdot \begin{bmatrix} 2 \\ 1 \end{bmatrix} +
+x_2 \cdot \begin{bmatrix} 1 \\ 0 \end{bmatrix} +
+x_3 \cdot \begin{bmatrix} 0 \\ 3 \end{bmatrix}
+\end{equation*}
+
+4. Consider the following matrix
+
+\begin{align*}
+  \begin{bmatrix}
+    2 & 1 & 0 \\
+    1 & 0 & 3
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix}
+    x_1 \\ x_2 \\ x_3
+  \end{bmatrix}
+  &=
+  \begin{bmatrix}
+    2 \cdot x_1 + 1 \cdot x_2 + 0 \cdot x_3 \\
+    1 \cdot x_1 + 0 \cdot x_2 + 3 \cdot x_3
+  \end{bmatrix}\\
+  &=
+  \begin{bmatrix}
+    5 \\ 7
+  \end{bmatrix}
+\end{align*}
+
+This is the same as $Ax=b$ where $A$ is the matrix above and $x$ is the vector
+of unknowns to be solved for.
+
+Compare this with $ax=b$ (the linear system). $x=\frac{b}{a}$.
+
+*What is the point of having 4 different ways to represent a linear system?*
+
+Method (1) is for building a linear system from scratch.
+
+Method (2), the augmented matrix, is for solving a linear system that has already
+been built.
+
+Method (3) is for proofs.
+
+Method (4) is for reasoning and proofs, because it is concise.
+
+
+\section{Theorems}
+
+Let $A$ be an $m \times n$ matrix with columns $v_{1}, v_{2}, \dots, v_{n}$ and
+x=$\begin{bmatrix} x_{1} & x_{2} & \dots & x_{n} \end{bmatrix}$ be a vector in
+$\mathbb{R}^{n}$ and $b$ be a vector in $\mathbb{R}^{m}$.
+
+\subsection{Theorem 3}
+
+$Ax=b$, $\begin{bmatrix}A | b\end{bmatrix}$ and 
+$\begin{bmatrix} x_1 v_1 + x_2 v_2 + \dots + x_n v_n \end{bmatrix}$ have the same
+solution set(s).
+
+\subsection{Theorem 4}
+If $B \sim A$ and $B$ is in REF, then the following statements are equivalent.
+
+\begin{enumerate}
+\item The linear system $Ax=b$ has a solution for every choice of $b\in\mathbb{R}^m$.
+\item Every $b\in\mathbb{R}^m$ is a linear combination of the columns of $A$.
+\item The span of $v_{1}, v_{2}, \dots, v_{n}$ generates $\mathbb{R}^m$.\\
+  In other words, every vector in $\mathbb{R}^m$ can be obtained from the span
+  of $v_{1}, v_{2}, \dots, v_{n}$.
+\item The matrix $B$ has a pivot (position) in every row.\\
+  This is our tool for testing if 1..3 are true.
+\end{enumerate}
+
+What does it mean for the statement to be equivalent? What is the theorem saying?
+
+What this theorem is saying is that these four statements are \textbf{all} either
+simultaneously true or simultaneously false.
+
+\subsubsection{Definition (Equivalence)}
+
+Two statements are equivalent if they are simultaneously true or simultaneously
+false.
+
+\subsubsection{Example}
+
+Is $Span(
+\begin{bmatrix}
+  1 \\ 1 \\ 1
+\end{bmatrix},
+\begin{bmatrix}
+  1 \\ 2 \\ 3
+\end{bmatrix},
+\begin{bmatrix}
+  1 \\ 0 \\ 1
+\end{bmatrix}
+) = \mathbb{R}^3$?
+
+Apply (3) and (4). (Please clean this up) 
+
+$A=\begin{bmatrix}
+  1 & 1 & 1 \\
+  1 & 2 & 3 \\
+  1 & 0 & 1
+\end{bmatrix}$
+
+R2:=R2-R1;
+R3:=R3=R1;
+
+$\begin{bmatrix}
+  1 & 1 & 1 \\
+  0 & 1 & -1 \\
+  0 & 2 & 0
+\end{bmatrix}$
+
+R3:=R3-2R2;
+
+$\begin{bmatrix}
+  1 & 1 & 1 \\
+  0 & 1 & -1 \\
+  0 & 0 & 2
+\end{bmatrix}$
+
+$\implies$ (4) is true.
+
+We can prove Theorem 4 by showing equivalence between (3) and (4), (2) and (1),
+and (2) and (4).
+
+\subsubsection{Proof that (4) and (1) are equivalent}
+
+(4) $\implies$ (1). If (4) is true, then $[A|b] \sim [B|\vdots] in REF$ has a pivot
+position in every row. ($Ax=b$ has a solution);
+
+If (d) is false, $A\sim B$ has at least one row of zeroes.
+
+Consider the matrix $B=\begin{bmatrix}
+  u \\
+  0 & 0 & \dots & 0 & 1
+\end{bmatrix}$.
+
+This system is inconsistent because it's augmented matrix has $0=1$ in the bottom row.
+
+But, since row operations are reversible, this system is equivalent to $A$.
+$\therefore$ $A$ is also inconsistent.
+
+$\implies Ax=b$ is inconsistent.
+
+This means that the statement (a) is not true.
+
+We have shown that if (d) is false, then there exists a vector $b$ such that $Ax=b$
+has no solutions, which implies that $a$ is false.
+
+\end{document}
