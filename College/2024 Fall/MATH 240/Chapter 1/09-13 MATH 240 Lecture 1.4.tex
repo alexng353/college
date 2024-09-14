@@ -35,9 +35,7 @@ If $
     v_{1} & v_{2} & \dots & v_{n} \\
     \vdots & \vdots & \vdots & \vdots \\
   \end{bmatrix}
-$
-
-Then $
+$ then, $
   Ax = \begin{bmatrix}
     x_1 \cdot v_{1} + x_2 \cdot v_{2} + \dots + x_n \cdot v_{n}
   \end{bmatrix}
@@ -49,9 +47,7 @@ If $
     \dots
     \\r_m
   \end{bmatrix}
-$
-
-Then $
+$ then $
   Ax = \begin{bmatrix}
     r_1 \cdot x\\
     r_2 \cdot x\\
@@ -60,27 +56,43 @@ Then $
   \end{bmatrix}
 $
 
-\section{Th. 5: Properties of the matrix vector product}
+\pagebreak
+\section{Theorem 5: Properties of the matrix vector product}
 
 Let $A$ and $B$ be $m \times n$ matrices over $\mathbb{R}$, and 
 $u,v \in \mathbb{R}^{n}$ and $c\in\mathbb{R}$
 
+\subsection{The Distributive Law}
+
+\begin{figure}[h!]
+  \begin{equation}
+    A(u+v) = Au + Av
+    \label{eq:1}
+  \end{equation}
+\end{figure}
+
+The Distributive Law implies that
+
+\begin{align*}
+  A(u+v) &= A(u+v) + A(w) \\
+         &= Au + Av + Aw \\
+\end{align*}
+
+because addition is commutative.
+
+\subsection{The Associative Law}
+
 \begin{equation}
-  A(u+v) = Au + Av \to \text{Distributive law}
-  \label{eq:1}
+  A(c \cdot v) = c \cdot A \cdot v
 \end{equation}
 
-This implies that $A(u+v+w) = A(u+v) + A(w) = Au + Av + Aw$ because addition is
-commutative.
+\subsection{The Distributive Law}
 
 \begin{equation}
-  A(c \cdot v) = c \cdot A \cdot v \to \text{Associative law}
+  (A+B)\cdot u = Au + Bu
 \end{equation}
 
-\begin{equation}
-  (A+B)\cdot u = Au + Bu \to \text{Distributive law}
-\end{equation}
-
+% \quotedblbase{Proofs of the above properties will be tested on the exams.}
 Proofs of the above properties will be tested on the exams.
 
 \subsection{Proving Property \ref{eq:1}}
@@ -199,17 +211,17 @@ solution set(s).
 \subsection{Theorem 4}
 If $B \sim A$ and $B$ is in REF, then the following statements are equivalent.
 
-\begin{enumerate}
+\begin{enumerate}[label=(\alph*)]
 \item The linear system $Ax=b$ has a solution for every choice of $b\in\mathbb{R}^m$.
 \item Every $b\in\mathbb{R}^m$ is a linear combination of the columns of $A$.
 \item The span of $v_{1}, v_{2}, \dots, v_{n}$ generates $\mathbb{R}^m$.\\
   In other words, every vector in $\mathbb{R}^m$ can be obtained from the span
   of $v_{1}, v_{2}, \dots, v_{n}$.
 \item The matrix $B$ has a pivot (position) in every row.\\
-  This is our tool for testing if 1..3 are true.
+  This is our tool for testing if a..c are true.
 \end{enumerate}
 
-What does it mean for the statement to be equivalent? What is the theorem saying?
+% What does it mean for the statement to be equivalent? What is the theorem saying?
 
 What this theorem is saying is that these four statements are \textbf{all} either
 simultaneously true or simultaneously false.
@@ -220,6 +232,7 @@ Two statements are equivalent if they are simultaneously true or simultaneously
 false.
 
 \subsubsection{Example}
+\noindent
 
 Is $Span(
 \begin{bmatrix}
@@ -232,59 +245,81 @@ Is $Span(
   1 \\ 0 \\ 1
 \end{bmatrix}
 ) = \mathbb{R}^3$?
+\newline
 
-Apply (3) and (4). (Please clean this up) 
+Step 1. Apply (a) and (b). % (Please clean this up) % this became a problem for future me
 
-$A=\begin{bmatrix}
+\[
+A = \begin{bmatrix}
   1 & 1 & 1 \\
   1 & 2 & 3 \\
   1 & 0 & 1
-\end{bmatrix}$
+\end{bmatrix}
+\]
 
-R2:=R2-R1;
-R3:=R3=R1;
+Apply the row operations:
 
-$\begin{bmatrix}
+\[
+R_2 := R_2 - R_1; \quad R_3 := R_3 - R_1
+\]
+
+\[
+\begin{bmatrix}
   1 & 1 & 1 \\
   0 & 1 & -1 \\
   0 & 2 & 0
-\end{bmatrix}$
+\end{bmatrix}
+\]
 
-R3:=R3-2R2;
+Next row operation:
 
-$\begin{bmatrix}
+\[
+R_3 := R_3 - 2R_2
+\]
+
+\[
+\begin{bmatrix}
   1 & 1 & 1 \\
   0 & 1 & -1 \\
   0 & 0 & 2
-\end{bmatrix}$
+\end{bmatrix}
+\]
 
-$\implies$ (4) is true.
+\[
+\implies \text{(d) is true.}
+\]
 
-We can prove Theorem 4 by showing equivalence between (3) and (4), (2) and (1),
-and (2) and (4).
+We can prove Theorem 4 by showing equivalence between (c) and (d), (b) and (a),
+and (a) and (d).
 
-\subsubsection{Proof that (4) and (1) are equivalent}
+\subsubsection{Proof that (d) and (a) are equivalent}
 
-(4) $\implies$ (1). If (4) is true, then $[A|b] \sim [B|\vdots] in REF$ has a pivot
-position in every row. ($Ax=b$ has a solution);
+(d) $\implies$ (a). If (d) is true, then $[A|b] \sim [B|\vdots]$ in REF has a pivot 
+position in every row, meaning $Ax=b$ has a solution.
 
-If (d) is false, $A\sim B$ has at least one row of zeroes.
+If (d) is false, then $A \sim B$ has at least one row of zeroes.
 
-Consider the matrix $B=\begin{bmatrix}
+Consider the matrix 
+\[
+B = \begin{bmatrix}
   u \\
   0 & 0 & \dots & 0 & 1
-\end{bmatrix}$.
+\end{bmatrix}.
+\]
+B is \textbf{inconsistent} because its augmented matrix has $0 = 1$ in the 
+bottom row. Since row operations are reversible, the system $B \sim A$. 
 
-This system is inconsistent because it's augmented matrix has $0=1$ in the bottom row.
+\[
+\therefore A \text{ is also inconsistent.}
+\]
 
-But, since row operations are reversible, this system is equivalent to $A$.
-$\therefore$ $A$ is also inconsistent.
+\[
+\implies Ax = b \text{ is inconsistent.}
+\]
 
-$\implies Ax=b$ is inconsistent.
+This means that statement (a) is false.
 
-This means that the statement (a) is not true.
-
-We have shown that if (d) is false, then there exists a vector $b$ such that $Ax=b$
-has no solutions, which implies that $a$ is false.
+We have shown that if (d) is false, then there exists a vector $b$ such that $Ax = b$
+has no solutions, which implies that (a) is false.
 
 \end{document}
