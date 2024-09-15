@@ -10,6 +10,9 @@
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{float}
+\usepackage{cleveref}
+\usepackage{hyperref}
+\usepackage{csquotes}
 
 \begin{document}
 
@@ -211,7 +214,11 @@ A wide range of terminology exists to describe material implication.
     \label{fig:p_implies_q}
 \end{figure}
 
-\subsubsection{Necessary Conditions (Examples)}
+Note that Material Implication does not depend on any relationship between the
+meanings of the two propisitions involved, but only the \textit{truth values} of
+the propositions.
+
+\subsubsection{Necessary Conditions (implication)}
 
 For a normal car to run, it is necessary that there is fuel in the tank,
 its spark plugs are properly adjusted, its oil pump is working, etc.
@@ -237,5 +244,88 @@ this definition, you can clearly visualize the truth table. Try thinking about
 (not (p land not q)) and look at the truth table.
 
 % 1.1 PDF p.48 (still c1.1 in the book)
+
+\subsubsection{Sufficient Conditions (implication)}
+
+For a purse to contain over a dollar, it would be sufficient for it to contain
+101 pennies, 21 nickels, 11 dimes, 5 quarters, etc.
+
+If any one of these circumstances is obtained, the specified situation will
+be realized.
+
+\subsubsection{Hints (wording)}
+
+\begin{enumerate}
+  \item "p is a \textbf{sufficient condition} for q"\\
+    $p \to q$ (q is a necessary condition for p)
+  \item "p is a \textbf{necessary condition} for q"\\
+    $q \to p$ (q is a sufficient condition for p)
+  \item Given any sentence saying something is \textit{necessary} or 
+    \textit{sufficient}, it is always:\\
+    sufficient $\to$ necessary
+\end{enumerate}
+
+$p\to q$ can read as any one of the phrases highlighted in
+\hyperref[fig:p_implies_q]{Figure~\ref*{fig:p_implies_q}}
+
+\subsubsection{The Four Types of Implication}
+
+There are 4 types of implication
+
+\begin{enumerate}
+\item \textbf{Logical Implication} - the consequent follows logically from its
+  antecedent (a.k.a. material implication)
+  \subitem If all humans are mortal and Socrates is a human, then Socrates is
+    mortal.
+\item \textbf{Definitional Implication} - the consequent follows the antecedent
+  by definition.
+  \subitem If Leslie is a Bachelor, then Leslie is unmarried.
+\item \textbf{Causal Implication} The connection between antecedent and 
+  consequent is discovered empirically (temporal ordering is implicit)
+  \subitem If I put X in acid, then X will turn red.
+\item \textbf{Decisional Implication} - A decision of the speaker to behave in
+  the specified way under the specified circumstances.
+  \subitem If we lose the game, then I'll eat my hat.
+\end{enumerate}
+
+For Propositional Logic, we will only be concerned with logical implication
+(material implication).
+
+\subsection{Order of Operations for Propositions}
+
+\[
+\begin{array}{|c|c|}
+\hline
+Operator & Precedence \\
+\hline
+\neg & 1 \\
+\land & 2 \\
+\lor & 3 \\
+\to & 4 \\
+\leftrightarrow & 5 \\
+\hline
+\end{array}
+\]
+
+% please include \oplus at some point in this table
+
+\section{Bit Strings}
+
+A \textbf{bit string} is a sequence of zero or more bits. 
+
+We can extend our bit operations to bit strings. We define the 
+\textbf{bitwise OR}, \textbf{bitwise AND}, and \textbf{bitwise XOR} of two bit
+strings of the same length to be the strings that have, as their bits, the
+\textbf{OR}, \textbf{AND}, and \textbf{XOR} of the corresponding bits in the
+two strings, respectively. (Pearce, 60)
+
+Translated into plain English, the bitwise extension of the logical operations
+means to take each corresponding bit in the two strings and apply the logical
+operation to them.
+
+Bitwise literally means \enquote{by bit}, so the bitwise extension of the
+logical operations in this way are called \textbf{bitwise logical operations}.
+
+If you need examples of this, please refer to Pearce, 60 or Rosen, 12.
 
 \end{document}
