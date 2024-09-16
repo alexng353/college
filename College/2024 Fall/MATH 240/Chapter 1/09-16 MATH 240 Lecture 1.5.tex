@@ -1,0 +1,249 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{enumitem}
+
+\begin{document}
+
+\title{MATH 240 Lecture 1.5\\Solution Sets of Linear Systems}
+\author{Alexander Ng}
+\date{September 16, 2024}
+
+\maketitle
+
+Every linear system can be written in the form $Ax=b$, where $A$ is the
+coefficient matrix, $x$ is the vector of unknowns, and $b$ is the vector of
+constants.
+
+In a linear system $Ax=0$, there is always a solution of the form $x=\mathbf{0}$,
+where $\mathbf{0}$ is the zero vector. This is known as the \textbf{trivial
+solution}. Other solutions (there may be 0, 1, or many) are called 
+\textbf{non-trivial solutions}.
+
+A linear system is said to be \textbf{homogeneous} if it can be written in the
+form $Ax=0$. Homogeneous systems are always consistent, becasue of the
+aformentioned trivial solution.
+
+
+\subsubsection*{Theorem}
+The solutions of $Ax=0$ can always be written as a 
+
+\begin{equation*}
+  \text{span}(v_1, v_2, \dots, v_n)
+\end{equation*}
+
+\subsubsection*{Example}
+
+\begin{align*}
+  \begin{bmatrix}
+    1 & 1 & 2 & 1 & 0 \\
+    0 & 1 & 2 & 0 & 0
+  \end{bmatrix}
+  &=
+  \begin{bmatrix}
+    1 & 0 & 0 & 1 & 0 \\
+    0 & 1 & 2 & 0 & 0
+  \end{bmatrix}\\
+  &x_1 + x_4 = 0 \\ 
+  &x_2 + 2x_3 = 0;
+\end{align*}
+
+\begin{align*}
+x_1 = -x_4\\
+x_2 = -2x_3\\
+x_3 = \text{free}\\
+x_4 = \text{free}\\
+\end{align*}
+
+Let $x_3 = s \in \mathbb{R}$
+
+Let $x_4 = t \in \mathbb{R}$
+
+\[
+  \begin{bmatrix}
+    x_1 \\ x_2 \\ x_3 \\ x_4
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    -t \\ -2s \\ s \\ t
+  \end{bmatrix}
+  =
+  s
+  \begin{bmatrix}
+    0 \\ -2 \\ 1 \\ 0
+  \end{bmatrix}
+  +
+  t
+  \begin{bmatrix}
+    -1 \\ 0 \\ 0 \\ 1
+  \end{bmatrix}
+  = \text{span}(v_1, v_2).
+\]
+
+\subsubsection*{Theorem}
+
+Consider the linear systems $Ax=b$ and $Ax=0$.
+
+Suppose $Ap=b$ and $Aw=0$. 
+
+$\bullet$ $p+w$ is a solution of $Ax=b$.
+
+Check. $A(p+w) = Ap + Aw = b + 0 = b$.
+
+If $Ax=b$ is consistent, then the solutions of $Ax=0$ can be expressed as
+
+$x = p + (\text{the solutions of } Ax=0) = p+\text{span}(v_1, v_2, \dots, v_n)$
+
+\subsubsection*{Example}
+
+$A\vec{x} = b$
+
+\[
+\begin{bmatrix}
+  1 & 1
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix}
+    x \\ y
+  \end{bmatrix}
+=
+\begin{bmatrix}
+  1
+\end{bmatrix}
+\]
+
+$x+y = 1$
+
+$x=1-y$
+
+$y=free$
+
+let $y=t$
+
+$x=1-t$
+
+$\vec{x} = 
+\begin{bmatrix}
+  x \\y 
+\end{bmatrix} 
+= \begin{bmatrix}
+  1-t \\ t
+\end{bmatrix}
+= \begin{bmatrix}
+  1 \\ 0 
+\end{bmatrix}
++ t\begin{bmatrix}
+  -1 \\ 1
+\end{bmatrix}$
+
+$t\begin{bmatrix}
+  -1 \\ 1
+\end{bmatrix}\text{ is } \text{span}(\begin{bmatrix}
+-1 \\ 1
+\end{bmatrix})$
+
+find example in lecture notes and solve
+
+\section*{The Geometry of the solutions to $Ax=b$}
+
+Find the picture in lecture notes
+
+Annotations:
+
+\begin{itemize}
+\item How can we describe the solutions of $x+y=1$ in terms of the solutions of
+  $x+y=0$?
+\item When $t=1$, $w=\begin{bmatrix}
+    -1 \\ 1
+  \end{bmatrix}$
+\item when you take any arbitrary solution to $x+y=0$, and add the vector $p$,
+  then add the vector $w$, you get the solutions to $x+y=1$
+\end{itemize}
+
+\section*{Theorem 6}
+
+Let $Ax=b$ be a linear system with solution $x=p$, that is *if p is a solution
+to $Ax=b$, that means $Ap=b$.
+
+Then,
+
+\begin{enumerate}
+\item If $Aw=0$, i.e. $w$ is a solution to $Ax=0$ then, $A(p+w)=b$.
+\item If $Az=b$, i.e. $z$ is a solution of $Ax=b$, then $A(z-p)=b$. \\
+  in other words, you can find a solution of $Ax=0$
+\end{enumerate}
+
+\subsection*{Proof of 6.1}
+
+\begin{itemize}
+  \item $Aw=0$
+  \item $A(p+w)=Ap+Aw=b+0=b$
+\end{itemize}
+
+\subsection*{Proof of 6.2}
+
+$A(z-p) \stackrel{?}{=} Az-Ap = b-b = 0$
+
+\subsubsection*{Theorem 5, C1.4}
+
+\begin{enumerate}
+  \item $A(u+v)=Au+Av$
+  \item $A(c\cdot u)=c\cdot Au$
+\end{enumerate}
+
+Proof of $A(z-p) = Az-Ap$
+
+$A(z-p) \stackrel{\text{Prop. }9}{=} A(z+(-1)\cdot p) \stackrel{\text{Th. 5, prop. }1}{=} 
+Az+A((-1)\cdot p) \stackrel{\text{Th. 5, prop. }2}{=} Az+(-1)\cdot Ap$
+
+
+% Fucking disgusting
+
+\subsection*{Example}
+
+what
+
+\begin{align}
+  S &=
+  \text{span}(
+  \begin{bmatrix}
+    1 \\0
+  \end{bmatrix},
+  \begin{bmatrix}
+    0 \\ 2
+  \end{bmatrix},
+  \begin{bmatrix}
+    2 \\2
+  \end{bmatrix}
+  )\\ &= \text{span}(
+    \begin{bmatrix}
+      1 \\0
+    \end{bmatrix},
+    \begin{bmatrix}
+      0 \\ 2
+    \end{bmatrix}
+    )\\
+    &= \text{span}(
+    \begin{bmatrix}
+      1 \\ 0
+    \end{bmatrix},
+    \begin{bmatrix}
+      0 \\ 1
+    \end{bmatrix}
+    )\\
+    &= \mathbb{R}^2
+\end{align}
+
+Every simplification of the above $span(\dots) \in \mathbb{R}^2$ has two vectors.
+
+Every vector in $\mathbb{R}^2$ can be written as a linear combination of $e_1$ and $e_2$.
+
+\end{document}

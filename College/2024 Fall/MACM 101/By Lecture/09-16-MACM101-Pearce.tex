@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{cleveref}
+\usepackage{hyperref}
+\usepackage{csquotes}
+
+\begin{document}
+
+\title{MACM 101 Lecture 09-16 S1.6 - Pearce}
+\author{Alexander Ng}
+\date{Friday, September 13, 2024}
+
+\maketitle
+
+\section*{Review}
+
+\subsection{Truth and Validity}
+\begin{itemize}
+  \item Truth is predicated on propositions, which are either true or false
+  \item Validity is predicated on \textbf{deductive arguments}, which are either valid or invalid
+\end{itemize}
+
+\subsection{Formal Definition of a Valid Argument}
+
+a deductive argument is valid if and only if the premises provide conclusive
+proof of the conclusion
+
+Either of the following must hold:
+
+\begin{itemize}
+  \item if the premises of a valid argument are all true, then its conclusion must also be true
+  \item it is impossible for the conclusion of a valid argument to be false while its premises are true
+  \item In other words, a tautology is a necessary and sufficient condition for a valid argument (???)
+\end{itemize}
+
+\subsection{Example of a Modus Ponens}
+
+If $\sqrt{2} > \frac{3}{2}$, then $\sqrt{2}^2 > \frac{3}{2}^2$
+
+We know that $\sqrt{2}>\frac{3}{2}$, Consequently, $2 > \frac{9}{4}$
+
+The argument is valid because it is modus ponens, but it is not correct because
+the conclusion is false.
+
+\subsection{Modus Ponens}
+
+\begin{align*}
+  p \to q \\
+  p \\
+  \therefore q
+\end{align*}
+
+$\uparrow$ Please fucking research this $\uparrow$
+
+\subsection{Modus Tollens}
+
+\center
+$p \to q, \therefore \neg q \to \neg p$
+\endcenter
+
+\section{The Rules of Inference and Valid Argumentation}
+
+*Find table on the rules of inference from Rosen
+
+\begin{align}
+  p \to q \\
+  \neg q \to \neg p\\
+  \neg p \to r\\
+  \neg q \to r\\
+  r \to s\\
+  \therefore \neg q \to s
+\end{align}
+
+
+\end{document}
