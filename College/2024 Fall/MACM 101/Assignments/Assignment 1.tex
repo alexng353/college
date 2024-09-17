@@ -24,14 +24,250 @@
 
 \section{Section 1.1}
 
-\subsection{Question 22}
+\subsection*{Question 22}
+\begin{itemize}
+    \item[a)] Inclusive or, the requirement is experience with one or the other,
+      and having both would still satisfy the requirement.
+    \item[b)] Exclusive or, Lunch will come with either soup or salad, not both.
+    \item[c)] Inclusive or, having both documents will not get you turned away.
+    \item[d)] Exclusive or, publishing prevents perishing.
+\end{itemize}
 
-\begin{enumerate}[label=(\alph*)]
-\item Inclusive or, the requirement is experience with one or the other, and 
-  having both would still satisfy the requirement.
-\item Exclusive or, Lunch will come with either soup or salad, not both.
-\item Inclusive or, having both documents will not get you turned away.
-\item Exclusive or, publishing prevents perishing
-\end{enumerate}
+\subsection*{Question 24}
+\begin{itemize}
+    \item[a)] If you get promoted, then you have washed the Boss's car.
+    \item[b)] If there are winds from the south, then there is a spring thaw.
+    \item[c)] If you bought the computer less than a year ago, then the warranty
+      is good.
+    \item[d)] If Willy cheats, then he gets caught.
+    \item[e)] If you can access the website, then you have paid a subscription
+      fee.
+    \item[f)] If you know the right people, then you get elected.
+    \item[g)] If Carol is on a boat, then she gets seasick.
+\end{itemize}
+
+\subsection*{Question 26}
+\begin{itemize}
+    \item[a)] If you send me an e-mail message, then I will remember to send you
+      the address.
+    \item[b)] If you were born in the United States, then you are a citizen of
+      this country.
+    \item[c)] If you keep your textbook, then it will be a useful reference in
+      your future courses.
+    \item[d)] If their goalie plays well, then the Red Wings will win the 
+      Stanley Cup.
+    \item[e)] If you get the job, then you had the best credentials.
+    \item[f)] If there is a storm, then the beach erodes.
+    \item[g)] If you log on to the server, then you have a valid password.
+    \item[h)] If you do not begin your climb too late, then you will reach the 
+      summit.
+    \item[i)] If you are among the first 100 customers tomorrow, then you will 
+      get a free ice cream cone.
+\end{itemize}
+
+\subsection*{Question 38}
+
+\begin{itemize}
+    \item[a)] $(p \lor q) \lor r$
+
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    $p$ & $q$ & $r$ & $p \lor q$ & $(p \lor q) \lor r$ \\
+    \hline
+    0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 1 \\
+    0 & 1 & 0 & 1 & 1 \\
+    0 & 1 & 1 & 1 & 1 \\
+    1 & 0 & 0 & 1 & 1 \\
+    1 & 0 & 1 & 1 & 1 \\
+    1 & 1 & 0 & 1 & 1 \\
+    1 & 1 & 1 & 1 & 1 \\
+    \hline
+\end{tabular}
+
+    \item[b)] $(p \lor q) \land r$
+
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    $p$ & $q$ & $r$ & $p \lor q$ & $(p \lor q) \land r$ \\
+    \hline
+    0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 1 & 0 \\
+    0 & 1 & 1 & 1 & 1 \\
+    1 & 0 & 0 & 1 & 0 \\
+    1 & 0 & 1 & 1 & 1 \\
+    1 & 1 & 0 & 1 & 0 \\
+    1 & 1 & 1 & 1 & 1 \\
+    \hline
+\end{tabular}
+
+    \item[c)] $(p \land q) \lor r$
+
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    $p$ & $q$ & $r$ & $p \land q$ & $(p \land q) \lor r$ \\
+    \hline
+    0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 1 \\
+    0 & 1 & 0 & 0 & 0 \\
+    0 & 1 & 1 & 0 & 1 \\
+    1 & 0 & 0 & 0 & 0 \\
+    1 & 0 & 1 & 0 & 1 \\
+    1 & 1 & 0 & 1 & 1 \\
+    1 & 1 & 1 & 1 & 1 \\
+    \hline
+\end{tabular}
+
+    \item[d)] $(p \land q) \lor r$
+
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    $p$ & $q$ & $r$ & $p \land q$ & $(p \land q) \lor r$ \\
+    \hline
+    0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 1 \\
+    0 & 1 & 0 & 0 & 0 \\
+    0 & 1 & 1 & 0 & 1 \\
+    1 & 0 & 0 & 0 & 0 \\
+    1 & 0 & 1 & 0 & 1 \\
+    1 & 1 & 0 & 1 & 1 \\
+    1 & 1 & 1 & 1 & 1 \\
+    \hline
+\end{tabular}
+
+    \item[e)] $(p \lor q) \land \neg r$
+
+\begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    $p$ & $q$ & $r$ & $\neg r$ & $p \lor q$ & $(p \lor q) \land \neg r$ \\
+    \hline
+    0 & 0 & 0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 1 & 1 & 1 \\
+    0 & 1 & 1 & 0 & 1 & 0 \\
+    1 & 0 & 0 & 1 & 1 & 1 \\
+    1 & 0 & 1 & 0 & 1 & 0 \\
+    1 & 1 & 0 & 1 & 1 & 1 \\
+    1 & 1 & 1 & 0 & 1 & 0 \\
+    \hline
+\end{tabular}
+
+    \item[f)] $(p \land q) \lor \neg r$
+
+\begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    $p$ & $q$ & $r$ & $\neg r$ & $p \land q$ & $(p \land q) \lor \neg r$ \\
+    \hline
+    0 & 0 & 0 & 1 & 0 & 1 \\
+    0 & 0 & 1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 1 & 0 & 1 \\
+    0 & 1 & 1 & 0 & 0 & 0 \\
+    1 & 0 & 0 & 1 & 0 & 1 \\
+    1 & 0 & 1 & 0 & 0 & 0 \\
+    1 & 1 & 0 & 1 & 1 & 1 \\
+    1 & 1 & 1 & 0 & 1 & 1 \\
+    \hline
+\end{tabular}
+\end{itemize}
+
+\subsection*{Question 42}
+Given $(p \lor \neg q) \land (q \lor \neg r) \land (r \lor \neg p)$, show that
+the statement is true if and only if $p$, $q$ and $r$ all have the same truth
+value.
+
+I lowkey gave up. Try again another day.
+
+\begin{align*}
+  p \lor (q \land r) \equiv (p \lor q) \land (p \lor r)\\
+  p \land (q \lor r) \equiv (p \land q) \lor (p \land r)
+\end{align*}
+
+\begin{equation}
+  (p \lor \neg q) \land (q \lor \neg r) \land (r \lor \neg p)
+\end{equation}
+
+\begin{equation}
+  ((p \lor \neg q) \land (q \lor \neg r)) \land (r \lor \neg p)
+\end{equation}
+\begin{equation}
+((p \land (q \lor \neg r)) \lor ((\neg q \land (q \lor \neg r)) \land (r \lor \neg p)
+\end{equation}
+
+\begin{equation}
+  [
+    r \land ((p \land (q \lor \neg r))
+    \lor ((\neg q \land (q \lor \neg r))
+  ] 
+  \lor [
+    \neg p \land ((p \land (q \lor \neg r)) 
+    \lor ((\neg q \land (q \lor \neg r))
+  ]
+\end{equation}
+
+% \begin{align}
+%   (p \lor \neg q) \land (q \lor \neg r) \\
+%   ((p \land (q \lor \neg r)) \lor ((\neg q \land (q \lor \neg r)) \\
+%   ((p \land q) \lor (p \land \neg r)) \lor ((\neg q \land q) \lor (\neg q \land \neg r))
+% \end{align}
+
+% % \begin{equation*}
+% %   [((p \lor \neg q) \land q) \lor ((p \lor \neg q) \land \neg r)] \land (r \lor \neg p)
+% % \end{equation*}
+%
+% \begin{align*}
+%   ([((p \lor \neg q) \land q) \lor ((p \lor \neg q) \land \neg r)] \land r) \lor 
+%   ([((p \lor \neg q) \land q) \lor ((p \lor \neg q) \land \neg r)] \land \neg p)\\
+% \end{align*}
+%
+% Let $A = [((p \lor \neg q) \land q) \lor ((p \lor \neg q) \land \neg r)]$
+%
+% \begin{equation*}
+%   (A \land r) \lor 
+%   (A \land \neg p)
+% \end{equation*}
+%
+% Let's simplify $A$ by applying the Distrbutive Laws
+%
+% \begin{align*}
+%   A &\equiv ((p \lor \neg q) \land q) \lor ((p \lor \neg q) \land \neg r)\\
+%     &\equiv ((p \land q) \lor (\neg q \land q)) \lor ((p \land \neg r) \lor (\neg q \land \neg r))\\
+%     &\equiv (p \land q) \lor F \lor (p \land \neg r) \lor (\neg q \land \neg r)
+% \end{align*}
+%
+%
+%
+% \begin{align}
+%   (p \lor \neg q) \land (q \lor \neg r) \land (r \lor \neg p) \\
+%   \equiv ((p \lor \neg q) \land q) \lor ((p \lor \neg q) \land \neg r) \land (r \lor \neg p) \\
+%   \equiv ((p \land q) \lor (\neg q \land q)) \lor ((p \lor \neg q) \land \neg r) \land (r \lor \neg p)
+% \end{align}
+%
+% \begin{align*}
+%   (p \lor \neg q) \land q \\
+%   \equiv q \land (p \lor \neg q) \\
+%   \equiv (p \land q) \lor (\neg q \land q) \\
+% \end{align*}
+
+% If $p \lor \neg q$ is true, then $p$ is true or $q$ is false.
+%
+% If $q \lor \neg r$ is true, then $q$ is true or $r$ is false.
+%
+% If $r \lor \neg p$ is true, then $r$ is true or $p$ is false.
+%
+% If $p$ is false, then in order for $p \lor \neg q$ to be true, $q$ must be 
+% false. Otherwise, $p \lor \neg q$ will be false, and therefore 
+% $(p \lor \neg q) \land \dots$ must be false. This shows that if one value of
+% $p$, $q$, or $r$ is false, all other values must be false in order for the
+% entire statement to be true.
+%
+% Similarly, if $p$ is true, then $p \lor \neg q$ must be true. This does not
+% constrain the value of $q$. However, if $p$ is true, in order for 
+% $r \lor \neg p$ to be true, $r$ must be true. This reasoning can be extended to
+% show that if $r$ is true, in order for $q \lor \neg r$ to be true, $q$ must
+% also be true. In any other case where one of $p$, $q$, or $r$ does not have the
+% same truth value as the others, $(p \lor \neg q) \land \dots$ must be false.
+
+
 
 \end{document}
