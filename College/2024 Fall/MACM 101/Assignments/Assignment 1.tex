@@ -176,98 +176,76 @@ Given $(p \lor \neg q) \land (q \lor \neg r) \land (r \lor \neg p)$, show that
 the statement is true if and only if $p$, $q$ and $r$ all have the same truth
 value.
 
-I lowkey gave up. Try again another day.
+\begin{enumerate}
+  \item $(p \lor \neg q) \land (q \lor \neg r) \land (r \lor \neg p)$ \quad Original Premise
+  \item $((p \lor \neg q) \land (q \lor \neg r)) \land (r \lor \neg p)$ \quad Trivial
+  \item $((q \land (p \lor \neg q)) \lor (\neg r \land (p \lor \neg q)))
+    \land (r \lor \neg p)$ \quad Distributive Property
+  \item 
+    $[r \land ((q \land (p \lor \neg q)) \lor (\neg r \land (p \lor \neg q)))] \lor 
+    [\neg p \land ((q \land (p \lor \neg q)) \lor (\neg r \land (p \lor \neg q)))]$
+    \quad Distributive Property
+  \item Take $q \land (p \lor \neg q)$ and apply the distributive property, \\
+    $(q \land p) \lor (q \land \neg q)$. Notice $q \land \neg q$ is a
+    contradiction, and $p \lor \mathbf{F} \Leftrightarrow p$. \\
+    $\therefore q \land (p \lor \neg q) \Leftrightarrow (q \land p)$ \\
+    Rewritten,
 
-\begin{align*}
-  p \lor (q \land r) \equiv (p \lor q) \land (p \lor r)\\
-  p \land (q \lor r) \equiv (p \land q) \lor (p \land r)
-\end{align*}
+    $[r \land ((p \land q) \lor (\neg r \land (p \lor \neg q)))] \lor 
+    [\neg p \land ((p \land q) \lor (\neg r \land (p \lor \neg q)))]$
+  \item Again, apply the distributive property. \\
+    $[(r \land (p \land q)) \lor (r \land (\neg r \land p) \lor (\neg r \lor \neg q)))]
+    \lor [(\neg p \land (p \land q)) \lor (\neg p \land ((\neg r \land p) \lor (\neg r \land \neg q)))]$
+  \item Notice how in the above statement, we have \\
+    $r \land ((\neg r \land p) \lor (\neg r \land \neg q))$, which distributes to \\
+    $r \land (\neg r \land p) \lor r \land (\neg r \land \neg q)$.
+    This can easily be manipulated using the associative laws to show \\
+    $((r \land \neg r) \land p) \lor ((r \land \neg r) \land \neg q)$. $\to p \land \neg p \equiv \mathbf{F}$\\
+    $(\mathbf{F} \land p) \lor (\mathbf{F} \land \neg q)$. We know that $\mathbf{F} \land p \equiv \mathbf{F}$.\\
+    $\therefore r \land ((\neg r \land p) \lor (\neg r \land \neg q)) \equiv \mathbf{F}$
+  \item $[(r \land (p \land q)) \lor \mathbf{F})]
+    \lor [(\neg p \land (p \land q)) \lor (\neg p \land ((\neg r \land p) \lor (\neg r \land \neg q)))]$\\
+    Doing the same with $(\neg p \land ((\neg r \land p) \lor (\neg r \land \neg q)))$, we get \\
+    $(\neg p \land (\neg r \land p)) \lor (\neg p \land (\neg r \land \neg q))$\\
+    $\mathbf{F} \lor (\neg p \land (\neg r \land \neg q))$
+  \item $[(r \land (p \land q)) \lor \mathbf{F})] \lor 
+    [\mathbf{F} \lor (\neg p \land (\neg r \land \neg q))]$\\
+    Because $p \lor \mathbf{F} \equiv p$,
+  \item $(r \land (p \land q)) \lor (\neg p \land (\neg q \land \neg r))$
+  \item $\therefore (p \lor \neg q) \land (q \lor \neg r) \land (r \lor \neg p) \equiv
+    (r \land (p \land q)) \lor (\neg p \land (\neg q \land \neg r))$
+\end{enumerate}
 
-\begin{equation}
-  (p \lor \neg q) \land (q \lor \neg r) \land (r \lor \neg p)
-\end{equation}
-
-\begin{equation}
-  ((p \lor \neg q) \land (q \lor \neg r)) \land (r \lor \neg p)
-\end{equation}
-\begin{equation}
-((p \land (q \lor \neg r)) \lor ((\neg q \land (q \lor \neg r)) \land (r \lor \neg p)
-\end{equation}
-
-\begin{equation}
-  [
-    r \land ((p \land (q \lor \neg r))
-    \lor ((\neg q \land (q \lor \neg r))
-  ] 
-  \lor [
-    \neg p \land ((p \land (q \lor \neg r)) 
-    \lor ((\neg q \land (q \lor \neg r))
-  ]
-\end{equation}
-
-% \begin{align}
-%   (p \lor \neg q) \land (q \lor \neg r) \\
-%   ((p \land (q \lor \neg r)) \lor ((\neg q \land (q \lor \neg r)) \\
-%   ((p \land q) \lor (p \land \neg r)) \lor ((\neg q \land q) \lor (\neg q \land \neg r))
-% \end{align}
-
-% % \begin{equation*}
-% %   [((p \lor \neg q) \land q) \lor ((p \lor \neg q) \land \neg r)] \land (r \lor \neg p)
-% % \end{equation*}
-%
-% \begin{align*}
-%   ([((p \lor \neg q) \land q) \lor ((p \lor \neg q) \land \neg r)] \land r) \lor 
-%   ([((p \lor \neg q) \land q) \lor ((p \lor \neg q) \land \neg r)] \land \neg p)\\
-% \end{align*}
-%
-% Let $A = [((p \lor \neg q) \land q) \lor ((p \lor \neg q) \land \neg r)]$
-%
-% \begin{equation*}
-%   (A \land r) \lor 
-%   (A \land \neg p)
-% \end{equation*}
-%
-% Let's simplify $A$ by applying the Distrbutive Laws
-%
-% \begin{align*}
-%   A &\equiv ((p \lor \neg q) \land q) \lor ((p \lor \neg q) \land \neg r)\\
-%     &\equiv ((p \land q) \lor (\neg q \land q)) \lor ((p \land \neg r) \lor (\neg q \land \neg r))\\
-%     &\equiv (p \land q) \lor F \lor (p \land \neg r) \lor (\neg q \land \neg r)
-% \end{align*}
-%
-%
-%
-% \begin{align}
-%   (p \lor \neg q) \land (q \lor \neg r) \land (r \lor \neg p) \\
-%   \equiv ((p \lor \neg q) \land q) \lor ((p \lor \neg q) \land \neg r) \land (r \lor \neg p) \\
-%   \equiv ((p \land q) \lor (\neg q \land q)) \lor ((p \lor \neg q) \land \neg r) \land (r \lor \neg p)
-% \end{align}
-%
-% \begin{align*}
-%   (p \lor \neg q) \land q \\
-%   \equiv q \land (p \lor \neg q) \\
-%   \equiv (p \land q) \lor (\neg q \land q) \\
-% \end{align*}
-
-% If $p \lor \neg q$ is true, then $p$ is true or $q$ is false.
-%
-% If $q \lor \neg r$ is true, then $q$ is true or $r$ is false.
-%
-% If $r \lor \neg p$ is true, then $r$ is true or $p$ is false.
-%
-% If $p$ is false, then in order for $p \lor \neg q$ to be true, $q$ must be 
-% false. Otherwise, $p \lor \neg q$ will be false, and therefore 
-% $(p \lor \neg q) \land \dots$ must be false. This shows that if one value of
-% $p$, $q$, or $r$ is false, all other values must be false in order for the
-% entire statement to be true.
-%
-% Similarly, if $p$ is true, then $p \lor \neg q$ must be true. This does not
-% constrain the value of $q$. However, if $p$ is true, in order for 
-% $r \lor \neg p$ to be true, $r$ must be true. This reasoning can be extended to
-% show that if $r$ is true, in order for $q \lor \neg r$ to be true, $q$ must
-% also be true. In any other case where one of $p$, $q$, or $r$ does not have the
-% same truth value as the others, $(p \lor \neg q) \land \dots$ must be false.
+\subsubsection*{Proof}
+Show that the statement is true if and only if $p$, $q$, and $r$ all have the 
+same truth value.
 
 
+\begin{enumerate}
+  \item Assume $p=q=r$. Then,
+  \item $(r \land (p \land q)) \lor (\neg p \land (\neg q \land \neg r)$
+  \item $(p \land p \land p) \lor (\neg p \land \neg p \land \neg p)$ \\
+    By the Idempotent laws,
+  \item $p \lor \neg p$. This is a Tautology.
+  \item $\therefore$ when all values of $p$, $q$ and $r$ share the same truth value,
+    the statement is true.
+\end{enumerate}
+
+\begin{enumerate}
+  \item Assume $p=q$; $r=\neg p$
+  \item $(r \land (p \land q)) \lor (\neg p \land (\neg q \land \neg r)$
+  \item $(p \land p \land \neg p) \lor (\neg p \land \neg p \land \neg \neg p)$ \\
+    By the Double Negation and Idempotent Laws,
+  \item $(p \land \neg p) \lor (\neg p \land p)$ \\
+    Because $p \land \neg p$ is a Contradiction,
+  \item $\mathbf{F} \lor \mathbf{F} \equiv \mathbf{F}$.
+  \item $\therefore$ when the values of $p$, $q$ and $r$ are not all the same,
+    the statement is false.
+\end{enumerate}
+
+Only after spending hours on this, I realize that I could have taken the
+original statement, applied the above two tests to it and proved the same
+thing. I am clearly, unequivocally, even, an idiot.
 
 \end{document}
+
