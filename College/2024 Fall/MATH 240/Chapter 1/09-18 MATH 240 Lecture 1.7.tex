@@ -1,0 +1,310 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{wasysym}
+
+\begin{document}
+
+\title{MATH 240 Lecture 1.7\\Linear Independence}
+\author{Alexander Ng}
+\date{September 18, 2024}
+
+\maketitle
+
+\section{Linear Independence}
+
+A set of vectors {$v_{1}, v_{2}, \dots, v_{n}$} is linearly independent (L.I.)
+if the vector equation
+
+\begin{equation*}
+  c_1 v_1 + c_2 v_2 + \dots + c_n v_n = 0
+\end{equation*}
+
+has only the zero solution $c_1=c_2=\dots=c_n=0$.
+
+Otherwise, the vectors are called linearly dependent (L.D.).
+
+\subsection{Example}
+
+Let $v_1 = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, 
+v_2 = \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix},
+v_3 = \begin{bmatrix} 2 \\ 1 \\ 0 \end{bmatrix}$
+
+Question 1: Are they linearly independent?
+
+Question 2: If not, find a non-zero solution for $c_1, c_2 \dots c_n$.
+
+\begin{equation*}
+  c_1 
+  \begin{bmatrix}
+    1 \\ 2 \\ 3
+  \end{bmatrix}
+  +
+  c_2 
+  \begin{bmatrix}
+    4 \\ 5 \\ 6
+  \end{bmatrix}
+  +
+  c_3 
+  \begin{bmatrix}
+    2 \\ 1 \\ 0
+  \end{bmatrix}
+  = 
+  \begin{bmatrix}
+    0 \\ 0 \\ 0
+  \end{bmatrix}
+  \implies
+  \begin{aligned}
+    c_1 + 4c_2 + 2c_3 &= 0 \\
+    2c_1 + 5c_2 + c_3 &= 0 \\
+    3c_1 + 6c_2 + 0c_3 &= 0
+  \end{aligned}
+\end{equation*}
+
+\begin{equation*}
+  \left[
+  \begin{array}{c|c}
+    A & b \\
+  \end{array}
+  \right]
+  = \begin {bmatrix}
+    1 & 4 & 2 & 0 \\
+    2 & 5 & 1 & 0 \\
+    3 & 6 & 0 & 0
+  \end{bmatrix}
+\end{equation*}
+
+R2:=R3-2R1
+
+R3:=R3-3R1
+
+\begin{equation*}
+  \begin{bmatrix}
+    1 & 4 & 2 & 0 \\
+    0 & -3 & -3 & 0 \\
+    0 & -6 & -6 & 0
+  \end{bmatrix}
+\end{equation*}
+
+R3:=R3-2R2
+
+R2:=-1/3 R2
+
+\begin{equation*}
+  \begin{bmatrix}
+    1 & 4 & 2 & 0 \\
+    0 & 1 & 1 & 0 \\
+    0 & 0 & 0 & 0
+  \end{bmatrix}
+\end{equation*}
+
+$c_3$ is free, so there is one ore more non-zero (nontrivial) solutions, and therefore
+this system is not linearly independent.
+
+In other words, there must be non-trivial solutions since $c_3$ is a free
+variable. So, $v_1, v_2, v_3$ are linearly dependent.
+
+R1:=R1-4R2
+
+\begin{equation*}
+  \begin{bmatrix}
+    1 & 0 & -2 & 0 \\
+    0 & 1 & 1 & 0 \\
+    0 & 0 & 0 & 0
+  \end{bmatrix}
+\end{equation*}
+
+\[
+\begin{aligned}
+c_1 - 2c_3 &= 0, \\
+c_2 + c_3 &= 0
+\end{aligned}
+\implies
+\begin{aligned}
+c_1 &= 2c_3, \\
+c_2 &= -c_3, \\
+c_3 &\text{ is free}
+\end{aligned}
+\]
+
+Pick $c_3 = 1 \implies c_1 = 2, c_2 = -1$. Hence, $2v_1 - v_2 + v_3 = 0$
+
+Check. (Exercise)
+
+Let $A$ be an $m \times n$ matrix with columns 
+$v_{1}, v_{2}, \dots, v_{n} \in \mathbb{R}^{n}$
+
+Then $A$ can be written as
+
+\begin{equation*}
+  A = \begin{bmatrix}
+    \vdots & \vdots & \vdots & \vdots \\
+    v_{1} & v_{2} & \dots & v_{n} \\
+    \vdots & \vdots & \vdots & \vdots \\
+  \end{bmatrix}
+  \begin{bmatrix}
+    x_1 \\ x_2 \\ \vdots \\ x_n
+    \end{bmatrix}
+   = 
+   x_1 \cdot v_1 + x_2 \cdot v_2 + \dots + x_n \cdot v_n = 0
+\end{equation*}
+
+Thefore (Theorem), The columns of a matrix $A$ are linearly independent 
+if and only if the matrix equation $Ax=0$ has only the trivial solution.
+
+\begin{equation*}
+  \begin{bmatrix}
+    x_1 \\ x_2 \\ \vdots \\ x_n
+  \end{bmatrix}
+  = 
+  \begin{bmatrix}
+    0 \\ 0 \\ \vdots \\ 0
+  \end{bmatrix}
+\end{equation*}
+
+\subsection{Example}
+
+\begin{equation*}
+  A = \begin{bmatrix}
+    1 & 0 & 1 \\
+    0 & 1 & 1 \\
+    1 & 0 & 1
+  \end{bmatrix}
+\end{equation*}
+
+Notice $v_1 + v_2 = v_3 \implies v_1 + v_2 - v_3 = 0$.
+
+Therefore, $v_1, v_2, v_3$ are linearly dependent.
+
+Therefore, the system $Ax=0$ has non-trivial solutions.
+
+\subsection{Theorem}
+
+If two \textbf{non-zero} vectors, $v_1$ and $v_2$ are linearly dependent, then
+then, we can write $v_1$ as $v_1 = c \cdot v_2$ for some $c \in \mathbb{R}$.
+(i.e. $v_1$ is a scalar multiple of $v_2$)
+
+\subsubsection{E.g.}
+
+\[
+v_1 = \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad v_2 = \begin{bmatrix} 2 \\ 4 \end{bmatrix}
+\]
+
+This implies:
+
+\[
+v_2 = 2 \cdot v_1
+\]
+
+Thus:
+
+\[
+v_2 - 2 \cdot v_1 = \mathbf{0}
+\]
+
+\subsubsection{Proof}
+
+Suppose $c_1 \cdot v_1 + c_2 \cdot v_2 = \mathbf{0}$ and $v_1, v_2$ are
+linearly dependent.
+
+If $c_1 = 0$, then $0 \cdot v_1 + c_2 \cdot v_2 = \mathbf{0}$ and $v_2$ is
+non-zero, then $c_2 = 0$.
+
+Therefore, $c_1 \neq 0$.
+And $\frac{1}{c_1}(c_1v_1 + c_2v_2) = \frac{1}{c_1}\mathbf{0}$
+
+Recall $c(u + v) = cu + cv$.
+
+So, $\frac{1}{c_1}(c_1v_1 + c_2v_2) = \frac{1}{c_1}(c_1v_1) + \frac{1}{c_1}(c_2v_2) = \mathbf{0}$
+
+Recall $c(d u) = (cd)\cdot u$.
+
+$\frac{1}{c_1}c_1 \cdot v_1 + \frac{1}{c_1}c_2 \cdot v_2 = \mathbf{0}$
+
+$1v_1 + \frac{c_2}{c_1}v_2 = \mathbf{0}$
+
+$v_1 = -\frac{c_2}{c_1}v_2$
+
+$\qed$
+
+Professor says to use smily face (\smiley) instead of $\qed$.
+
+\subsubsection{What if 3 non-zero vectors are linearly dependent?}
+
+$c_1 \cdot u + c_2 \cdot v + c_3 \cdot w = \mathbf{0}$
+
+Does this mean $u = d_1 \cdot v + d_2 \cdot w$ for some $d_1, d_2 \in \mathbb{R}$?
+
+No, because $u$ is not necessarly a scalar multiple of $v$ or $w$.
+
+Consider (proof by contradiction)
+
+$u = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$
+
+$v = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$
+
+$w = \begin{bmatrix} 0 \\ 2 \end{bmatrix}$
+
+$0 \cdot u + 1 \cdot w - 2 \cdot v = \mathbf{0}$
+
+Despite the fact that these vectors are linearly dependent, because u[0] is 1,
+and no other vector has a non-zero entry in the first row, we cannot write
+u as a scalar multiple of v or w.
+
+\subsection{Theorem 7}
+
+Suppose $S={v_1, v_2, \dots, v_r}, r \geq 2, and v_1, v_2, \dots, v_r$ are
+non-zero and linearly dependent. Then, at least one of the vectors in $S$ is
+a linear combination of the other vectors in $S$.
+
+In our example, we have $w = 2v + 0u$.
+
+% Can the vectors $v_1 = [2 1], v_2 = [1 2], v_3 = [3 5]$ be linearly dependent?
+
+Can the vectors 
+\[
+\mathbf{v}_1 = \begin{bmatrix} 2 \\ 1 \end{bmatrix}, \quad
+\mathbf{v}_2 = \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad
+\mathbf{v}_3 = \begin{bmatrix} 3 \\ 5 \end{bmatrix}
+\]
+be linearly dependent?
+
+We need to solve:
+\[
+c_1 \cdot \begin{bmatrix} 2 \\ 1 \end{bmatrix} 
++ c_2 \cdot \begin{bmatrix} 1 \\ 2 \end{bmatrix}
++ c_3 \cdot \begin{bmatrix} 3 \\ 5 \end{bmatrix} = \mathbf{0}
+\]
+
+This gives us the system of equations:
+\[
+\begin{aligned}
+2c_1 + c_2 + 3c_3 &= 0, \\
+c_1 + 2c_2 + 5c_3 &= 0
+\end{aligned}
+\]
+
+Find the example in lecture notes and copy.
+
+The vectors \textbf{must} be linearly dependent becasue there are 3 unknowns,
+$c_1, c_2, c_3$ but only 2 equations. Therefore, there \textbf{must} be at least one
+free variable, so the linear system has infinite non-trivial solutions.
+
+\subsection{Theorem 8}
+
+If $S={v_1, v_2, \dots, v_r} \in \mathbb{R}^{n}$ and $r > n$, then $S$ is
+a linearly dependent set of vectors. (if you have more vectors than the space
+you're working in, they are linearly dependent)
+
+Therefore, $\mathbb{R}^n$ can have at most $n$ linearly independent vectors.
+
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{cleveref}
+\usepackage{hyperref}
+\usepackage{csquotes}
+
+\begin{document}
+
+\title{MACM 101 Chapter 1.4}
+\author{Alexander Ng}
+\date{September 18, 2024}
+
+\maketitle
+
+\section{Quantifiers}
+
+\subsection{Universal vs. Existential Quantifiers}
+
+\begin{itemize}
+  \item The Universal Quantifier, $\forall$, reads:\\
+    $\forall x P(x)$ \\
+    for all $x$, $P(x)$ is true
+
+  \item The Existential Quantifier $\exists$
+
+  \item $u$ is the universal discourse
+\end{itemize}
+
+\subsection{The Problem}
+
+Free Variables are bad
+
+Bound variables are good
+
+A predicate is a function that maps variables to truth values, allowing one to
+go beyond atomic propositions.
+
+Quantifiers are things that allow us to bind variables to a domain.
+
+Predicates are not propositions, unless we replace the free variable with
+a logical constant, or bind it's variables with a quantifier.
+
+Going from a generalization to an instance is called instantiation, which is 
+very important for acting on quantified predicates using the rules of inference
+and the laws of logic.
+
+\subsubsection{P and Q}
+
+Let $P(x)$ and $Q(x)$ be open statements defined for $\mathbf{u}$.
+
+These two statements are logically equivalent, written
+
+\begin{equation*}
+  \forall x [P(x) \Leftrightarrow Q(x)]
+\end{equation*}
+
+when $P(a) \leftrightarrow Q(a) \forall a \in \mathbf{u}$.
+
+*State the contrapositive, converse and inverse. (exercise)
+
+$\forall x P(x) | x \in \mathbb{R} \implies something$
+how to specify the domain of a quantifier
+
+Quantifiers have higher precedence than all logical connectives
+
+Don't mix quantifiers unless they are the same kind
+
+\subsubsection{Arguing with Quantified Statements}
+
+1. $\exists m \in \mathbb{Z}^+ \forall n \in \mathbb{Z}^+ (m \leq n)$
+
+2. $\forall x \in \mathbb{R}^+ \exists y\in{R}^+ (x \leq y)$
+
+\end{document}
