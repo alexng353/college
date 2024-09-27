@@ -1,0 +1,184 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{wasysym}
+
+\begin{document}
+
+\title{MATH 240 Lecture 1.7\\Matrix Operations}
+\author{Alexander Ng}
+\date{September 18, 2024}
+
+\maketitle
+
+\section{Matrix Operations}
+
+Let $A$ be an $m \times n$ matrix, where $m$ is the number of rows and $n$ is
+the number of columns. The notation $a_{ij}$ refers to the entry of the matrix $A$ in row $i$ and 
+column $j$.
+
+\begin{equation*}
+  A = \begin{bmatrix}
+    a_{11} & a_{12} & \dots & a_{1n} \\
+    a_{21} & a_{22} & \dots & a_{2n} \\
+    \vdots & \vdots & a_{ij} & \vdots \\
+    a_{m1} & a_{m2} & \dots & a_{mn}
+  \end{bmatrix}
+\end{equation*}
+
+\subsection{Definitions}
+
+Let $A$, $B$ be $m \times n$ matrices over $\mathbb{R}$, and $r \in \mathbb{R}$.
+
+Define
+
+Matrix addition:
+
+\begin{equation*}
+  C = A + B \text{ is defined as } c_{ij} = a_{ij} + b_{ij}
+\end{equation*}
+
+Matrix subtraction:
+
+\begin{equation*}
+  D = A - B \text{ is defined as } d_{ij} = a_{ij} - b_{ij}
+\end{equation*}
+
+Scalar multiplication:
+
+\begin{equation*}
+  E = rA \text{ is defined as } e_{ij} = r \cdot a_{ij}
+\end{equation*}
+
+In each of these cases, you just apply the corresponding operation to each entry
+component-wise.
+
+\subsubsection{Properties}
+
+Properties of matrix addition and scalar multiplication.
+
+These are the same as the properties of vector addition and scalar multiplication.
+
+**Matrix addition is identical to vector addition
+
+\subsection{Matrix Multiplication $C = A \cdot B$}
+
+Definition:
+
+Let $B = \begin{bmatrix}
+  \vdots & \vdots & \vdots & \vdots \\
+  b_{1} & b_{2} & \dots & b_{n} \\
+  \vdots & \vdots & \vdots & \vdots
+\end{bmatrix}$. 
+$A \cdot B = \begin{bmatrix} Ab_1 & Ab_2 & \dots & Ab_n\end{bmatrix}$
+
+Example:
+
+\begin{equation*}
+  \begin{bmatrix}
+    1 & 1 \\ 
+    2 & 2
+  \end{bmatrix}
+  \begin{bmatrix}
+    3 & 4 \\ 
+    5 & 6
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    8 & 10 \\ 
+    16 & 20
+  \end{bmatrix}
+\end{equation*}
+
+\begin{equation*}
+  \begin{bmatrix}
+    1 & 1 \\ 
+    2 & 2
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix}
+    3 \\ 5
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    3 + 5 = 8 \\
+    6 + 10 = 16
+  \end{bmatrix}
+\end{equation*}
+
+\begin{equation*}
+  \begin{bmatrix}
+    1 & 1 \\ 
+    2 & 2
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix}
+    4 \\ 6
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    4 + 6 = 10 \\
+    8 + 12 = 20
+  \end{bmatrix}
+\end{equation*}
+
+\subsubsection{Shortcut: The Row Column Rule for computing $A \cdot B$}
+
+For any $C = A \cdot B$, we can shortcut the computation by computing the
+dot product of each row of $A$ with it's corresponding column of $B$.
+
+Notice, in general, $A \cdot B \ne B \cdot A$. Matrix multiplication is not
+commutative.
+
+\pagebreak
+
+The matrices don't have to be square.
+
+\subsubsection{Example}
+
+Let $A = \begin{bmatrix}
+  1 & 1 & 1 \\
+  2 & 2 & 2
+\end{bmatrix}$
+
+
+Let $B = \begin{bmatrix}
+  1 & 1 \\
+  2 & 1 \\
+  3 & 1
+\end{bmatrix}$
+
+In order to compute $A \cdot B$, the number of columns of $A$ must equal the
+number of rows of $B$. $A$ must be an $m \times n$ matrix, and $B$ must be an
+$n \times p$ matrix. $C$ becomes an $m \times p$ matrix.
+
+Suppose we have two linear transformations $T_1(x) = Ax$ and $T_2(x) = Bx$.
+
+Let $T_3(x) = T_1(T_2(x)) = T_1(Bx) = ABx$.
+
+Is $T_3(x)$ also a linear transformation? Yes.
+
+Check: (The following properties must hold for $T_3(x)$ to be a linear
+transformation)
+
+1. $T_3(x+y) = T_3(x) + T_3(y)$
+
+% clean me up please
+$A(B(x+y)) = A(Bx + By) = A(Bx) + A(By) = T_1(T_2(x)) + T_1(T_2(y)) = T_3(x) + T_3(y)$
+
+2. $T_3(cx) = cT_3(x)$
+
+$T_3$'s standard matrix is going to be $AB$.
+
+\textbf{Thm.} $A(Bx) = (AB)x$
+
+\end{document}
