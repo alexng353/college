@@ -1,0 +1,335 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{cleveref}
+\usepackage{hyperref}
+\usepackage{csquotes}
+
+\begin{document}
+
+\title{MACM 101 Chapter 1 Homework}
+\author{Alexander Ng}
+\date{Monday, September 30, 2024}
+
+\maketitle
+
+\subsection*{Question 8}
+
+\subsubsection*{Part a}
+
+Every rabbit hops.
+
+\subsubsection*{Part b}
+
+Every animal is a rabbit and it hops.
+
+\subsubsection*{Part c}
+
+There exists an animal such that, if it is a rabbit, then it hops.
+
+\subsubsection*{Part d}
+
+There exists an animal that is a rabbit and it hops.
+
+\subsection*{Question 20}
+
+\subsubsection*{Part a}
+
+\[
+P(-5) \lor P(-3) \lor P(-1) \lor P(1) \lor P(3) \lor P(5)
+\]
+
+\subsubsection*{Part b}
+
+\[
+P(-5) \land P(-3) \land P(-1) \land P(1) \land P(3) \land P(5)
+\]
+
+\subsubsection*{Part c}
+
+\[
+P(-5) \land P(-3) \land P(-1) \land P(3) \land P(5)
+\]
+
+\subsubsection*{Part d}
+
+\[
+P(1) \lor P(3) \lor P(5)
+\]
+
+\subsubsection*{Part e}
+
+\[
+(\neg P(-5) \lor \neg P(-3) \lor \neg P(-1) \lor \neg P(1) \lor \neg P(3)
+\lor \neg P(5)) \land (P(-5) \land P(-3) \land P(-1))
+\]
+
+\subsection*{Question 32}
+
+\subsubsection*{Part a}
+
+\enquote{All dogs have fleas}
+
+Let the domain be dogs and $P(x)$ mean \enquote{$x$ has fleas}
+
+$\forall x P(x)$
+
+Negate, then apply De Morgan's Laws for Quantifiers
+
+$\neg (\forall x P(x)) \equiv \exists x \neg P(x)$
+
+\enquote{There is a dog that does not have fleas}
+
+\subsubsection*{Part b}
+
+\enquote{There is a horse that can add}
+
+Let the domain be horses and $P(x)$ mean \enquote{$x$ can add}
+
+$\exists x P(x)$
+
+Negate, then appy De Morgan's Laws.
+
+$\neg (\exists x P(x)) \equiv \forall x \neg P(x)$
+
+\subsubsection*{Part c}
+
+\enquote{Every koala can climb}
+
+Let the domain be koalas and $P(x)$ mean \enquote{$x$ can climb}
+
+$\forall x P(x)$
+
+Negate, then apply De Morgan's Laws
+
+$\neg (\forall x P(x)) \equiv \exists x \neg P(x)$
+
+\enquote{There exists a koala that cannot climb}
+
+\subsubsection*{Part d}
+
+\enquote{No monkey can speak french}
+
+Let the domain be monkeys and $P(x)$ mean \enquote{$x$ can speak french}
+
+$\forall x \neg P(x)$
+
+Negate, then apply De Morgan's Law and the Double Negation Law
+
+$\neg (\forall x \neg P(x)) \equiv \exists x \neg (\neg P(x)) \equiv \exists x P(x)$
+
+\subsubsection*{Part e}
+
+\enquote{There exists a pig that can swim and catch fish}
+
+Let the domain be pigs, $P(x)$ mean \enquote{$x$ can swim} and $Q(x)$ mean 
+\enquote{$x$ can catch fish}
+
+$\exists x (P(x) \land Q(x))$
+
+Negate, then apply De Morgan's Law for Quantifiers and the regular De Morgan's Law
+$\neg (\exists x (P(x) \land Q(x))) \equiv \forall x \neg (P(x) \land Q(x)) 
+\equiv \forall x (\neg P(x) \lor \neg Q(x))$
+
+\enquote{All pigs can not swim or not catch fish.}
+
+\subsection*{Question 36}
+
+\subsubsection*{Part a}
+
+\[
+\forall x(-2 < x < 3)
+\]
+
+\[
+-2 < x < 3 \text{ implies } -2 < x \text{ and } x < 3
+\]
+
+\[
+\forall x((-2 < x) \land (x < 3))
+\]
+
+Negate:
+
+\[
+\neg \forall x((-2 < x) \land (x < 3))
+\]
+
+Using De Morgan's Laws for Quantifiers:
+
+\[
+\equiv \exists x \neg ((-2 < x) \land (x < 3))
+\]
+
+Using De Morgan's Laws:
+
+\[
+\equiv \exists x ((\neg (-2 < x)) \lor (\neg (x < 3)))
+\]
+
+When \( -2 < x \) is not true, we require \( x \leq -2 \).
+
+When \( x < 3 \) is not true, we require \( x \geq 3 \).
+
+\[
+\equiv \exists x ((x \leq -2) \lor (x \geq 3))
+\]
+
+\subsubsection*{Part b}
+
+\[
+\forall x (0 \leq x < 5)
+\]
+
+\[
+0 \leq x < 5 \text{ implies } 0 \leq x \text{ and } x < 5
+\]
+
+\[
+\forall x ((0 \leq x) \land (x < 5))
+\]
+
+Negate:
+
+\[
+\neg \forall x ((0 \leq x) \land (x < 5))
+\]
+
+Using De Morgan's Laws for Quantifiers:
+
+\[
+\equiv \exists x \neg ((0 \leq x) \land (x < 5))
+\]
+
+Using De Morgan's Laws:
+
+\[
+\equiv \exists x ((\neg (0 \leq x)) \lor (\neg (x < 5)))
+\]
+
+When \( 0 \leq x \) is not true, we require \( x < 0 \).
+
+When \( x < 5 \) is not true, we require \( x \geq 5 \).
+
+\[
+\equiv \exists x ((x < 0) \lor (x \geq 5))
+\]
+
+\subsubsection*{Part c}
+
+\[
+\exists x (-4 \leq x \leq 1)
+\]
+
+\[
+-4 \leq x \leq 1 \text{ implies } -4 \leq x \text{ and } x \leq 1
+\]
+
+\[
+\exists x ((-4 \leq x) \land (x \leq 1))
+\]
+
+Negate:
+
+\[
+\neg \exists x ((-4 \leq x) \land (x \leq 1))
+\]
+
+Using De Morgan's Laws for Quantifiers:
+
+\[
+\equiv \forall x \neg ((-4 \leq x) \land (x \leq 1))
+\]
+
+Using De Morgan's Laws:
+
+\[
+\equiv \forall x ((\neg (-4 \leq x)) \lor (\neg (x \leq 1)))
+\]
+
+When \( -4 \leq x \) is not true, we require \( x < -4 \).
+
+When \( x \leq 1 \) is not true, we require \( x > 1 \).
+
+\[
+\equiv \forall x ((x < -4) \lor (x > 1))
+\]
+
+\subsubsection*{Part d}
+
+\[
+\exists x (-5 < x < -1)
+\]
+
+\[
+-5 < x < -1 \text{ implies } -5 < x \text{ and } x < -1
+\]
+
+\[
+\exists x ((-5 < x) \land (x < -1))
+\]
+
+Negate:
+
+\[
+\neg \exists x ((-5 < x) \land (x < -1))
+\]
+
+Using De Morgan's Laws for Quantifiers:
+
+\[
+\equiv \forall x \neg ((-5 < x) \land (x < -1))
+\]
+
+Using De Morgan's Laws:
+
+\[
+\equiv \forall x ((\neg (-5 < x)) \lor (\neg (x < -1)))
+\]
+
+When \( -5 < x \) is not true, we require \( x \leq -5 \).
+
+When \( x < -1 \) is not true, we require \( x \geq -1 \).
+
+\[
+\equiv \forall x ((x \leq -5) \lor (x \geq -1))
+\]
+
+\subsection*{Question 48}
+
+\subsubsection*{Part a}
+
+If $(\forall x P(x)) \lor A$ is true, then $A$ is true or for all values $y$ 
+we have that $P(y)$ is true. Then $P(y) \lor A$ is true for all values of $y$, 
+implying that $\forall x (P(x) \lor A)$ is true.
+
+If $(\forall x P(x)) \lor A$ is false, then $A$ is false and there exists a value 
+of $y$ such that $P(y)$ is false. Then $P(y) \lor A$ is false, implying that
+$\forall x (P(x) \lor A)$ is also false.
+
+Thus, the two expressions always have the same truth value and therefore they are 
+logically equivalent.
+
+\subsubsection*{Part b}
+
+If $(\exists x P(x)) \lor A$ is true, then $A$ is true or there exists a value $y$ 
+for which $P(y)$ is true. Then $P(y) \lor A$ is true, implying that
+$\exists x (P(x) \lor A)$ is true.
+
+If $(\exists x P(x)) \lor A$ is false, then $A$ is false, and for all values $y$ 
+we have that $P(y)$ is false. Then $P(y) \lor A$ is false for every value of $y$, 
+implying that $\exists x (P(x) \lor A)$ is also false.
+
+Thus, the two expressions always have the same truth value and therefore they are 
+logically equivalent.
+
+\end{document}

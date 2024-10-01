@@ -1,0 +1,269 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{cleveref}
+\usepackage{hyperref}
+\usepackage{csquotes}
+
+\begin{document}
+
+\title{MACM 101 Chapter 1 Homework}
+\author{Alexander Ng}
+\date{Monday, September 30, 2024}
+
+\maketitle 
+
+\subsection*{Question 4}
+
+\subsubsection*{Part a}
+
+\[
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+p & q & r & p \lor q & q \lor r & (p \lor q) \lor r & p \lor (q \lor r) \\
+\hline
+1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+1 & 1 & 0 & 1 & 1 & 1 & 1 \\
+1 & 0 & 1 & 1 & 1 & 1 & 1 \\
+1 & 0 & 0 & 1 & 0 & 1 & 1 \\
+0 & 1 & 1 & 1 & 1 & 1 & 1 \\
+0 & 1 & 0 & 1 & 1 & 1 & 1 \\
+0 & 0 & 1 & 0 & 1 & 1 & 1 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\hline
+\end{array}
+\]
+
+\subsubsection*{Part b}
+
+\[
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+p & q & r & p \land q & q \land r & (p \land q) \land r & p \land (q \land r) \\
+\hline
+1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+1 & 1 & 0 & 1 & 0 & 0 & 0 \\
+1 & 0 & 1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 1 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\hline
+\end{array}
+\]
+
+\subsection*{Question 12}
+
+\subsubsection*{Part a}
+
+\[
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+p & q & p \lor q & \neg p & \neg p \land (p \lor q) & [\neg p \land (p \lor q)] \to q \\
+\hline
+1 & 1 & 1 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 & 0 & 1 \\
+0 & 1 & 1 & 1 & 1 & 1 \\
+0 & 0 & 0 & 1 & 0 & 1 \\
+\hline
+\end{array}
+\]
+
+\subsubsection*{Part b}
+
+\[
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+p & q & r & p \to q & q \to r & (p \to q) \land (q \to r) & p \to r & [(p \to q) \land (q \to r)] \to (p \to r) \\
+\hline
+1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+1 & 1 & 0 & 1 & 0 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 & 1 & 0 & 1 & 1 \\
+1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 \\
+0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+0 & 1 & 0 & 1 & 0 & 0 & 1 & 1 \\
+0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 \\
+0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+\end{array}
+\]
+
+\subsubsection*{Part c}
+
+\[
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+p & q & p \to q & p \land (p \to q) & [p \land (p \to q)] \to q \\
+\hline
+1 & 1 & 1 & 1 & 1 \\
+1 & 0 & 0 & 0 & 1 \\
+0 & 1 & 1 & 0 & 1 \\
+0 & 0 & 1 & 0 & 1 \\
+\hline
+\end{array}
+\]
+
+\subsubsection*{Part d}
+
+\[
+\begin{array}{|c|c|c|c|c|c|c|c|c|}
+\hline
+p & q & r & p \lor q & p \to r & q \to r & (p \lor q) \land (p \to r) & (p \lor q) \land (p \to r) \land (q \to r) & [(p \lor q) \land (p \to r) \land (q \to r)] \to r \\
+\hline
+1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+1 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 1 \\
+1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+1 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 1 \\
+0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 & 1 & 1 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 \\
+\hline
+\end{array}
+\]
+
+\subsection*{Question 14}
+
+\subsubsection*{Part a}
+
+\[
+\neg p \land (p \lor q) \to q
+\]
+
+$p \to q$ is false when $p$ is true and $q$ is false.
+
+Assume $ \neg p \land (p \lor q)$ is true.
+
+When $ \neg p \land (p \lor q)$ is true, then both $ \neg p$ and $ p \lor q$ are true.
+
+When $ \neg p$ is true, then $ p$ is false.
+
+When $ p \lor q$ is true with $ p$ false, then we require that $ q$
+is true, and thus $ \neg p \land (p \lor q) \to q$ is always true
+(as we know that the conditional statement is also true whenever
+$ \neg p \land (p \lor q)$ is false). This implies that
+$ \neg p \land (p \lor q) \to q \equiv \mathbb{T}$.
+
+\subsubsection*{Part b}
+
+\[
+[(p \to q) \land (q \to r)] \to (p \to r)
+\]
+
+$p \to q$ is false when $p$ is true and $q$ is false.
+
+Assume $(p \to q) \land (q \to r)$ is true.
+
+When $(p \to q) \land (q \to r)$ is true, then both
+$p \to q$ and $q \to r$ are true.
+
+When $p$ is true, because $p \to q$ is true, $q$ must also be true, and
+because $q \to r$ is true, $r$ must also be true. $p \to r$ is also true
+when both $p$ and $r$ are true.
+
+When $p$ is false, then $p \to r$ is true as well.
+
+Therefore, $p \to r$ is true in each case, and thus
+$[(p \to q) \land (q \to r)] \to (p \to r)$ is
+always true (as we know that the conditional statement is also true whenever
+$(p \to q) \land (q \to r)$ is false).
+
+This implies that
+$[(p \to q) \land (q \to r)] \to (p \to r) \equiv \mathbb{T} $ 
+
+\subsubsection*{Part c}
+
+\[
+p \land (p \to q) \to q
+\]
+
+$p \to q$ is false when $p$ is true and $q$ is false.
+
+Assume $p \land (p \to q)$ is true.
+
+When $p \land (p \to q)$ is true, both $p$ and $p \to q$ are true.
+
+When $p \to q$ and $p$ are both true, we also require that $q$ is true. 
+Thus, $p \land (p \to q) \to q$ is always true (since we know the conditional 
+statement is also true whenever $p \land (p \to q)$ is false). 
+
+This implies that $p \land (p \to q) \to q \equiv \mathbb{T} $
+
+\subsubsection*{Part d}
+
+\[
+[(p \lor q) \land (p \to r) \land (q \to r)] \to r
+\]
+
+$p \to q$ is false when $p$ is true and $q$ is false.
+
+Assume $(p \lor q) \land (p \to r) \land (q \to r)$ is true.
+
+When $(p \lor q) \land (p \to r) \land (q \to r)$ is true, then $p \lor q$, 
+$p \to r$, and $q \to r$ are all true.
+
+$p \lor q$ being true implies that either $p$ or $q$ is true.
+
+When $p$ is true, then $r$ is true as well (since $p \to r$ is true).
+
+When $q$ is true, then $r$ is true as well (since $q \to r$ is true).
+
+However, $r$ is true in each case, and thus 
+$[(p \lor q) \land (p \to r) \land (q \to r)] \to r$ is always true 
+(as we know that the conditional statement is also true whenever 
+$(p \lor q) \land (p \to r) \land (q \to r)$ is false). This then gives us that
+
+\[
+[(p \lor q) \land (p \to r) \land (q \to r)] \to r \equiv \mathbb{T}
+\]
+
+\subsection*{Question 22}
+
+Show that $p \to q$ and $\neg q \to \neg p$ are logically equivalent.
+
+\begin{enumerate}
+  \item $p \to q \equiv \neg p \lor q$ (Logical Equivalences)
+  \item $\equiv \neg p \lor \neg \neg q$ (Double Negation Law)
+  \item $\equiv \neg \neg q \lor \neg p$ (Commutative Law)
+  \item $\equiv \neg q \to \neg p$ (Logical Equivalences)
+  \item $\therefore p \to q \equiv \neg q \to \neg p$
+\end{enumerate}
+
+\subsection*{Question 24}
+
+Show that $\neg (p \oplus q)$ and $p \leftrightarrow q$ are logically equivalent.
+
+
+\begin{enumerate}
+  \item $\neg (p \oplus q) \equiv \neg ((p \lor q) \land (\neg p \lor \neg q))$ (Definition)
+  \item $\equiv \neg [(p \land (\neg p \lor \neg q)) \lor (q \land (\neg p \lor \neg q))]$ (Distributive Law)
+  \item $\equiv \neg [((p \land \neg p) \lor (p \land \neg q)) \lor ((q \land \neg p) \lor (q \land \neg q))]$ (Distributive Law)
+  \item $\equiv \neg [(\mathbb{F} \lor (p \land \neg q)) \lor ((q \land \neg p) \lor \mathbb{F})]$ By $p \land \neg p \equiv \mathbb{F}$
+  \item $\equiv \neg [(p \land \neg q) \lor (q \land \neg p)]$ (Identity Law)
+  \item $\equiv \neg (p \land \neg q) \land \neg (q \land \neg p)$ (De Morgan's Law)
+  \item $\equiv (\neg p \lor q) \land (\neg q \lor p)$ (De Morgan's Law and Double Negation Law)
+  \item $\equiv (p \to q) \land (q \to p)$ (Logical Equivalence)
+  \item $\equiv p \leftrightarrow q$ (Logical Equivalence)
+\end{enumerate}
+
+\subsection*{Question 40}
+
+$s^* = s$ if the compound proposition can be simplified to a variable or the
+negation of a variable
+
+\subsection*{Question 46}
+
+Not sure how to do this one.
+
+\end{document}
