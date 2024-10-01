@@ -1,6 +1,14 @@
 import fs from "fs/promises";
 import { exec } from "child_process";
 
+const templateData = await fs.readFile("./documentTemplate.txt", "utf-8");
+if (
+  !templateData.includes("{content}") ||
+  !templateData.includes("{questionNumber}")
+) {
+  throw new Error("Document Template Invalid");
+}
+
 const assignment = "./Assignments/Assignment 1.tex";
 const out = "./Assignments/Assignment 1";
 
@@ -18,30 +26,7 @@ function packageQuestions(dataArray: string[]) {
 }
 
 function template(questionNumber: number, content: string) {
-  `
-\\documentclass[12pt]{article}
-\\usepackage{amsmath}
-\\usepackage{amssymb}
-\\usepackage{amsthm}
-\\usepackage{amsfonts}
-\\usepackage{graphicx}
-\\usepackage{textcomp}
-\\usepackage{hyperref}
-\\usepackage{tikz}
-\\usepackage{enumitem}
-\\usepackage{mathtools}
-\\usepackage{float}
-\\usepackage{cleveref}
-\\usepackage{hyperref}
-\\usepackage{csquotes}
-
-\\begin{document}
-
-\\section*{Question {questionNumber}}
-
-{content}
-
-\\end{document}`
+  return templateData
     .replace('{content}', content)
     .replace('{questionNumber}', questionNumber.toString());
 }
