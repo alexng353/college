@@ -13,6 +13,8 @@
 \usepackage{cleveref}
 \usepackage{hyperref}
 \usepackage{csquotes}
+\usepackage{multicol}
+\usepackage{booktabs}
 
 \begin{document}
 
