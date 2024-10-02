@@ -23,10 +23,84 @@
 \maketitle
 
 \subsection*{Question 2}
+
+This is Modus Tollens, and Modus Tollens is valid. Therefore, the conclusion of
+the argument is true, given the hypotheses are also true. 
+
 \subsection*{Question 6}
+
+Use rules of inference to show that the hypotheses “If it does not rain or if
+it is not foggy, then the sailing race will be held and the lifesaving 
+demonstration will go on,” “If the sailing race is held, then the trophy will 
+be awarded,” and “The trophy was not awarded” imply the conclusion “It rained.”
+
+Let $p$ (r) be the proposition \enquote*{It rains.}
+
+Let $q$ (f) be the proposition \enquote*{It is foggy.}
+
+Let $r$ (s) be the proposition \enquote*{The sailing race will be held.}
+
+Let $s$ (l) be the proposition \enquote*{The life saving demonstration will go on.}
+
+Let $t$ (t) be the proposition \enquote*{The trophy will be awarded}.
+
+We are given $(\neg p \lor \neg q) \to (r \land s)$, $r \to t$ and $\neg t$
+
+\begin{enumerate}
+  \item $\neg t$ (Hypothesis)
+  \item $r \to t$ (Hypothesis)
+  \item $\neg r$ (Modus Tollens of Step 1 and 2)
+  \item $(\neg  p \lor  \neg  q) \to (r \land s)$ (Hypothesis)
+  \item $(\neg (r \land s)) \to \neg (\neg p \lor \neg q))$ (Contrapositive of Step 4)
+  \item $(\neg r \lor \neg s) -> (p \land q)$ (De Morgan's and Double Negative)
+  \item $\neg r \lor  \neg s$ (Following Step 3)
+  \item $p \land q$ (Modus Ponens of Step 6 and 7)
+  \item $p$ (Simplification of Step 8)
+\end{enumerate}
+
 \subsection*{Question 12}
+
+We are given:
+
+\begin{enumerate}
+  \item $(p \land t) \to (r \lor s)$
+  \item $q \to (u \land t)$
+  \item $u \to p$
+  \item $\neg s$
+  \item $q$
+\end{enumerate}
+
+We want to show $r$.
+
+\begin{enumerate}
+  \item $q \to (u \land t)$ (Hypothesis)
+  \item $q$ (Hypothesis)
+  \item $u \land t$ (Modus Ponens of 1 and 2)
+  \item $u$ (Simplification of 3)
+  \item $t$ (Simplification of 3)
+  \item $u \to p$ (Hypothesis)
+  \item $p$ (Modus Ponens of 4 and 5)
+  \item $(p \land t) \to (r \lor s)$
+  \item $r \lor s$ (Modus Ponens of 8, 7 and 5)
+  \item $\neg s$ (Hypothesis)
+  \item $r$ (Disjunctive Syllogism of 9 and 10)
+\end{enumerate}
+
 \subsection*{Question 18}
+
+Some $s$ exists such that $S(s, \text{Max} )$, but we cannot conclude that Max
+is one such $s$ from the givens. Therefore, it does not follow that 
+$S(\text{Max} , \text{Max} )$, and the first step is invalid.
+
 \subsection*{Question 20}
+
+\begin{enumerate}[label=(\alph*)]
+  \item Invalid. $(x > 0) \to (x^2 > 0)$ does not mean $(x^2 > 0) \to (x>0)$
+\item Valid (Modus Ponens)
+\end{enumerate}
+
 \subsection*{Question 28}
+
+I ran out of time trying to solve this problem
 
 \end{document}

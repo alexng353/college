@@ -44,13 +44,10 @@ function scrub(text: string) {
 }
 
 function template(questionNumber: number, content: string) {
-  const questionNumberTemplate = "\\section*{Question {questionNumber}}"
-
-  const templated = questionNumberTemplate
-    .replace('{questionNumber}', questionNumber.toString());
+  const templatedNumber = `\\section*{Question ${questionNumber}}`;
 
   return templateData
-    .replace('{content', templated + "\n" + content);
+    .replace('{content}', templatedNumber + "\n" + content);
 }
 
 async function generateLatexPdf(filename: string): Promise<string> {
@@ -93,6 +90,7 @@ if (!scrubbed) {
 let splits = scrubbed.split(/\\subsection\*{Question (\d*)}/g);
 
 if (splits[0] === "") splits = splits.slice(1);
+
 const packaged = packageQuestions(splits);
 
 for (const [idx, split] of packaged.entries()) {
@@ -110,10 +108,13 @@ for (const [idx, split] of packaged.entries()) {
     continue;
   };
 
+  console.log(`Writing ${idx}.tex`);
   await fs.writeFile(`./${idx}.tex`, template(questionNumber, content));
+  console.log(`Generating ${idx}.tex`);
   await generateLatexPdf(`./${idx}.tex`).catch((error) => {
     console.error(error);
   });
+  console.log(`Successfully generated ${idx}.pdf`);
 
   const folderName = fileName.split(".").slice(0, fileName.split(".").length - 1).join(".");
 

@@ -23,8 +23,71 @@
 \maketitle
 
 \subsection*{Question 2}
+
+\subsubsection*{Part a}
+
+$\exists x \forall y (xy=y)$
+
+There exists a number $x$ such that forall $y$, $x \times y = y$
+
+\subsubsection*{Part b}
+
+$\forall x \forall y (((x \geq 0) \land (y < 0)) \to (x - y > 0))$
+
+For every real number $x$ and every real number $y$, if $x$ is greater than or
+equal to $0$ and $y$ is less than $0$, $x-y$ is greater than $0$.
+
+\subsubsection*{Part c}
+
+$\forall x \forall y \exists z (x = y + z)$
+
+For every real number $x$ and every real number $y$, there exists a real number
+$z$ such that $x = y + z$.
+
 \subsection*{Question 10}
+
+\begin{enumerate}[label=(\alph*)]
+  \item $\forall x F(x, \text{Fred} )$
+  \item $\forall y F(\text{Evelyn} , y)$
+  \item $\forall x \exists y F(x, y)$
+  \item $\forall x \exists y \neg F(x, y)$
+  \item $\forall x \exists y F(y, x)$
+  \item $\neg \forall x ( F(x, \text{Fred} ) \land F(x, \text{Jerry} )) $
+  \item $\exists x \exists y( F(\text{Nancy} , x) \land F(\text{Nancy}, y) \land y
+    \ne z \land \forall w (F(\text{Nancy} , w) \to (w = y) \lor (w = z)))$
+  \item $\exists y (\forall x F(x, y) \land \forall z(\forall w F(w, z)) \to z = y)$
+  \item $\neg \exists x F(x, x)$
+  \item $\exists x \exists y (F(x, y) \land \forall z (F(x, z) \to ((z = y) \lor (z = x))))$
+\end{enumerate}
+
+
 \subsection*{Question 24}
+
+\begin{enumerate}[label=(\alph*)]
+  \item There exists a real number $x$ such that for all real numbers $y$,
+    the sum $x + y$ is equal to $y$
+  \item For all real numbers $x$ and all real numbers $y$, if $x$ is a nonzero
+    positive and $y$ is negative, $x - y$ is positive.
+  \item There exists a real number $x$ and there exists a real number $y$ such
+    that $x$ is negative, $y$ is negative and $x-y$ is greater than $0$.
+  \item For all real numbers $x$ and all real numbers $y$, if and only if
+    $x \ne 0$ and $y \ne 0$, then $x \times y \ne 0$.
+\end{enumerate}
+
 \subsection*{Question 26}
+
+Let $Q(x, y)$ be the statement $x + y = x - y$
+
+\begin{enumerate}[label=(\alph*)]
+  \item False, $1 + 1 \ne 1 - 1$
+  \item True, $2 + 0 = 2 - 0$
+  \item False, since there are many values of $y$ such that $1 + y \ne 1 - y$
+  \item False, $x + 2 = x - 2$ has no solution
+  \item True, when $x = y = 0$, $ x + y = x - y$
+  \item True, when $y = 0$, $x + y = x - y$
+  \item True, when $y = 0$, $x + y = x - y$
+  \item False, since there is no $x$ such that $x + y = x - y$ for all $y$.
+  \item False
+\end{enumerate}
 
 \end{document}

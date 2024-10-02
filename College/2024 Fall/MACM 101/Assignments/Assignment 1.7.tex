@@ -23,12 +23,88 @@
 \maketitle
 
 \subsection*{Question 2}
+
+Use a direct proof to show that the sum of two even integers is even.
+
+Suppose $a$ and $b$ are even integers. There exists integers $c$ and $d$ such that
+$a = 2c$ and $b = 2d$. Adding, we obtain that $a + b = 2c + 2d = 2(c + d)$.
+$a + b$ is $2$ times the integer $c + d$. Therefore, $a + b$ is even.
+
 \subsection*{Question 4}
+
+Show that the additive inverse, or negative, of an even number is an even number
+using a direct proof.
+
+Suppose $a$ is an even integer. Then there exists an integer $s$ such that 
+$a = 2s$. The additive inverse of $a$ is $-a = -2s$, which is equal to $2(-s)$.
+Since this is $2$ times the integer $-s$, the additive inverse of $a$ is even.
+
 \subsection*{Question 8}
+
+Prove that if $n$ is a perfect square, then $n + 2$ is not a perfect square.
+
+Let $n = m^2$. If $m = 0$, then $n+2=2$, which is not a perfect square. This
+means $m \geq 1$. The smallest perfect square greater than $n$ is $(m+1)^2$.
+We have $(m+1)^2 = m^2 + 2m + 1 = n + 2m + 1$.
+
+$n + 2m + 1 > n + 2 \cdot 1 + 1 > n+2$. Therefore, $n+2$ cannot be a perfect 
+square.
+
 \subsection*{Question 14}
+
+Prove that if $x$ is rational and $x \ne 0$, then $\frac{1}{x}$ is rational.
+
+If $x$ is rational, then $x$ can be written as a fraction of two integers, $a$
+and $b$. If $x = \frac{a}{b}$, then $\frac{1}{x} = \frac{b}{a}$, where $b$ and
+$a$ are both integers. Therefore, $\frac{1}{x}$ is also rational.
+
 \subsection*{Question 24}
+
+Show that if you pick three socks from a drawer containing just blue socks and
+black socks, you must get either a pair of blue socks or a pair of black socks.
+
+Proof by contradiction:
+
+Suppose we don't draw a pair of blue socks or a pair of black socks. Then we
+drew at most one blue sock and one black sock. However, one of each socks is
+only two socks. But we are drawing three socks. Therefore our supposition that
+we did not get a pair of blue socks or a pair of black socks is incorrect.
+Therefore, we must have drawn a pair of blue socks or a pair of black socks.
+
 \subsection*{Question 34}
+
+Suppose $x = \frac{a}{b}$ where $a$ and $b$ are integers with $b \ne 0$.
+Then, $\frac{x}{2} = \frac{a}{2b}$, which is rational since $a$ and $2b$ are
+both integers with $2b \ne 0$.
+
+Suppose $\frac{x}{2} = \frac{a}{b}$ where $a$ and $b$ are integers with $b \ne 0$.
+Then $x = \frac{2a}{b}$, and $3x-1 = \frac{6a}{b}-1 = \frac{6a-b}{b}$. This is
+rational since $6a-b$ and $b$ are integers with $b \ne 0$.
+
+Suppose that $3x-1 = \frac{a}{b}$ where $a$ and $b$ are integers with $b \ne 0$.
+Then $x = \frac{\frac{a}{b}+1}{3} = \frac{a+b}{3b}$ and this is rational, since
+$a+b$ and $3b$ are both integers with $3b \ne 0$.
+
+This shows that $(i)$ implies $(ii)$, $(ii)$ implies $(iii)$ and $(iii)$
+implies $(i)$, which is sufficient to show that these three statements are
+equivalent.
+
 \subsection*{Question 40}
+
+Counterexample: $15$.
+
+$9 + 9 + n = 18 + n > 15$, therefore we can only use one $9$.
+
+$9 + 4 + 4 = 17 > 15$, therefore we can use at most one $9$ and one $4$.
+
+$9 + 4 + 1 = 14$ is the greatest sum we can create with at most one $9$ and 
+one $4$.
+
+Clearly, at least one more $1$ is required to create $15$. Therefore, it is
+impossible to write the number $15$ as the sum of the squares of three integers. 
+
 \subsection*{Question 44}
+
+Ran out of time
 
 \end{document}

@@ -13,6 +13,8 @@
 \usepackage{cleveref}
 \usepackage{hyperref}
 \usepackage{csquotes}
+\usepackage{multicol}
+\usepackage{booktabs}
 
 \begin{document}
 
@@ -23,8 +25,103 @@
 \maketitle
 
 \subsection*{Question 4}
+
+Prove that there are no perfect cubes less than 1000 that are the sum of the
+cubes of two positive integers. 
+
+The cubes less than 1000 are $1$, $8$, $27$, $64$, $125$, $216$, $343$, $512$
+and $729$.
+
+If we try to sum all possible combinations of two of these integers, we see
+that none of them work. By exhaustion, we conclude that no cube less than 1000
+is the sum of two cubes. (See next page for the exhaustive list)
+
+\pagebreak
+
+\begin{multicols}{2}
+\noindent
+\begin{tabular}{l}
+       1 + 1 = 2 \\
+       1 + 8 = 9 \\
+     1 + 27 = 28 \\
+     1 + 64 = 65 \\
+   1 + 125 = 126 \\
+   1 + 216 = 217 \\
+   1 + 343 = 344 \\
+   1 + 512 = 513 \\
+   1 + 729 = 730 \\
+      8 + 8 = 16 \\
+     8 + 27 = 35 \\
+     8 + 64 = 72 \\
+   8 + 125 = 133 \\
+   8 + 216 = 224 \\
+   8 + 343 = 351 \\
+   8 + 512 = 520 \\
+   8 + 729 = 737 \\
+    27 + 27 = 54 \\
+    27 + 64 = 91 \\
+  27 + 125 = 152 \\
+  27 + 216 = 243 \\
+  27 + 343 = 370 \\
+  27 + 512 = 539 \\
+  27 + 729 = 756 \\
+   64 + 64 = 128 \\
+  64 + 125 = 189 \\
+  64 + 216 = 280 \\
+  64 + 343 = 407 \\
+  64 + 512 = 576 \\
+  64 + 729 = 793 \\
+ 125 + 125 = 250 \\
+ 125 + 216 = 341 \\
+ 125 + 343 = 468 \\
+ 125 + 512 = 637 \\
+ 125 + 729 = 854 \\
+\end{tabular}
+
+\columnbreak
+
+\begin{tabular}{l}
+ 216 + 216 = 432 \\
+ 216 + 343 = 559 \\
+ 216 + 512 = 728 \\
+ 216 + 729 = 945 \\
+ 343 + 343 = 686 \\
+ 343 + 512 = 855 \\
+343 + 729 = 1072 \\
+512 + 512 = 1024 \\
+512 + 729 = 1241 \\
+729 + 729 = 1458 \\
+\end{tabular}
+\end{multicols}
+
+\pagebreak
+
 \subsection*{Question 6}
+
+$\min(a, \min(b, c)) = \min(\min(a, b), c)$
+
+If $a$ is the smallest (or equal to the smallest), then clearly, 
+$a \leq \min(b, c)$, so the left side is just $a$. On the right side, we
+have $\min(\min(a, b), c) = \min(a, c) = a$. So we have $a=a$.
+
+If $b$ is the smallest (or equal to the smallest), we can use the same
+reasoning to show that $\min(a, \min(b, c)) = \min(a, b) = b$ on the left,
+and $\min(\min(a, b), c) = \min(b, c) = b$ on the right, and we have $b=b$.
+
+If $c$ is the smallest (or equal to the smallest), then we have
+$\min(a, \min(b,c)) = \min(a, c) = c$ on the left and $\min(\min(a, b), c) = c$
+on the right. Again, we have $c = c$.
+
+Since one of the three has to be smallest, all cases have been taken care of.
+
 \subsection*{Question 10}
+
+$1$ has this property, since the only positive integer not exceeding $1$ is $1$,
+and therefore the sum is $1$. Therefore, there exists a positive integer that
+equals the sum of the positive integers not exceeding it.
+
+This is a constructive proof.
+
 \subsection*{Question 34}
 
 \end{document}
