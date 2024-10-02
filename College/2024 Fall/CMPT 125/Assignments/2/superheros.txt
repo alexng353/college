@@ -1,0 +1,499 @@
+**Name:** Thunderstrike
+**Height:** 6'0"
+**Superpower:** Weather Control
+Harnessing storms, Thunderstrike commands thunder and lightning, using nature's fury to protect the innocent and fight against evil.
+
+**Name:** Shadow Weaver
+**Height:** 5'8"
+**Superpower:** Shadow Manipulation
+Shadow Weaver bends darkness to her will, creating illusions and cloaking herself, striking fear into the hearts of villains.
+
+**Name:** Iron Guardian
+**Height:** 6'4"
+**Superpower:** Enhanced Strength
+With unbreakable armor, Iron Guardian defends the weak, his immense strength serving as a bulwark against tyranny.
+
+**Name:** Mystic Echo
+**Height:** 5'6"
+**Superpower:** Sound Manipulation
+Mystic Echo can harness and amplify sound waves, using them for sonic blasts or stealthy stealth missions.
+
+**Name:** Frostbite
+**Height:** 5'9"
+**Superpower:** Cryokinesis
+Frostbite commands ice and cold, freezing foes in their tracks while protecting the world from threats.
+
+**Name:** Blaze
+**Height:** 5'10"
+**Superpower:** Fire Manipulation
+Blaze controls flames, igniting passion and courage while scorching villains who threaten peace.
+
+**Name:** Nightshade
+**Height:** 5'7"
+**Superpower:** Plant Control
+Nightshade can communicate with and control plants, using nature as her ally in battle against oppression.
+
+**Name:** Titan
+**Height:** 7'0"
+**Superpower:** Size Alteration
+Titan can grow to enormous proportions, using his immense size to protect and intimidate enemies.
+
+**Name:** Speedster
+**Height:** 5'11"
+**Superpower:** Super Speed
+Speedster dashes through the city, using his incredible velocity to thwart crimes and save lives in the blink of an eye.
+
+**Name:** Quantum
+**Height:** 6'1"
+**Superpower:** Time Manipulation
+Quantum can bend time, altering events and creating opportunities to avert disasters before they happen.
+
+**Name:** Ember
+**Height:** 5'5"
+**Superpower:** Heat Generation
+Ember radiates heat and can ignite her surroundings, using her powers to fight against cold-hearted villains.
+
+**Name:** Steel Phantom
+**Height:** 6'3"
+**Superpower:** Intangibility
+Steel Phantom can phase through solid objects, making him an elusive hero who outsmarts his foes.
+
+**Name:** Vortex
+**Height:** 5'10"
+**Superpower:** Wind Manipulation
+Vortex commands gusts of wind, creating barriers and funnels to protect the innocent from harm.
+
+**Name:** Oracle
+**Height:** 5'8"
+**Superpower:** Precognition
+Oracle sees potential futures, guiding her allies with foresight and wisdom in their darkest hours.
+
+**Name:** Steel Serpent
+**Height:** 6'2"
+**Superpower:** Metallic Manipulation
+Steel Serpent can control and reshape metals, using his powers to craft weapons and barriers in battle.
+
+**Name:** Luminary
+**Height:** 5'9"
+**Superpower:** Light Manipulation
+Luminary bends light to create illusions and dazzling displays, blinding enemies while inspiring hope.
+
+**Name:** Mirage
+**Height:** 5'7"
+**Superpower:** Illusion Casting
+Mirage creates lifelike illusions, confounding foes and allowing her to slip away unnoticed.
+
+**Name:** Gale Force
+**Height:** 6'0"
+**Superpower:** Air Manipulation
+Gale Force commands the winds, using them to propel himself and allies into battle or create powerful gusts.
+
+**Name:** Bio-Guardian
+**Height:** 5'11"
+**Superpower:** Healing Factor
+Bio-Guardian heals wounds rapidly, ensuring he can protect others and recover from any injury.
+
+**Name:** Phantom Blade
+**Height:** 5'10"
+**Superpower:** Shadow Blades
+Phantom Blade conjures weapons from shadows, striking swiftly and silently to eliminate threats.
+
+**Name:** Tidal Wave
+**Height:** 6'0"
+**Superpower:** Water Manipulation
+Tidal Wave commands water, creating torrents and barriers to shield allies and combat foes.
+
+**Name:** Pulsar
+**Height:** 5'6"
+**Superpower:** Energy Absorption
+Pulsar absorbs energy from her surroundings, converting it into powerful blasts against villains.
+
+**Name:** Ironclad
+**Height:** 6'3"
+**Superpower:** Armor Manifestation
+Ironclad can generate protective armor instantly, enhancing his strength and defense in battle.
+
+**Name:** Geode
+**Height:** 5'8"
+**Superpower:** Earth Manipulation
+Geode shapes the earth, creating barriers and weapons from the ground to protect the innocent.
+
+**Name:** Bolt
+**Height:** 5'10"
+**Superpower:** Electricity Manipulation
+Bolt harnesses electricity, using bolts of lightning to incapacitate foes and power technology.
+
+**Name:** Chameleon
+**Height:** 5'9"
+**Superpower:** Camouflage
+Chameleon can blend into any environment, making him a master of stealth and surprise attacks.
+
+**Name:** Celestial
+**Height:** 6'2"
+**Superpower:** Cosmic Energy Manipulation
+Celestial channels cosmic forces, using starlight to unleash powerful attacks and shield allies.
+
+**Name:** Sentinel
+**Height:** 6'0"
+**Superpower:** Force Field Generation
+Sentinel creates protective barriers, defending those in need from harm and absorbing incoming attacks.
+
+**Name:** Inkwell
+**Height:** 5'5"
+**Superpower:** Ink Manipulation
+Inkwell brings drawings to life, using animated illustrations to aid in battles against evil.
+
+**Name:** Steelwing
+**Height:** 6'1"
+**Superpower:** Flight
+Steelwing soars through the skies, using aerial maneuvers to outsmart foes and protect the city from above.
+
+**Name:** Pyroclast
+**Height:** 6'0"
+**Superpower:** Lava Manipulation
+Pyroclast commands molten rock, using his powers to create fiery shields and overwhelming attacks.
+
+**Name:** Circuit
+**Height:** 5'11"
+**Superpower:** Technopathy
+Circuit communicates with machines, hacking and controlling technology to outsmart criminals and protect the city.
+
+**Name:** Wildcard
+**Height:** 5'8"
+**Superpower:** Luck Manipulation
+Wildcard alters probabilities, turning the tide of battle in favor of friends and against foes.
+
+**Name:** Dusk
+**Height:** 5'10"
+**Superpower:** Night Vision
+Dusk sees perfectly in the dark, using stealth and strategy to outmaneuver enemies in shadowy environments.
+
+**Name:** Gale
+**Height:** 5'7"
+**Superpower:** Sound Manipulation
+Gale creates sonic blasts and deafening roars, using sound as both a weapon and a shield.
+
+**Name:** Spectrum
+**Height:** 6'0"
+**Superpower:** Light Spectrum Manipulation
+Spectrum controls the full light spectrum, creating colorful illusions and dazzling attacks against villains.
+
+**Name:** Ripple
+**Height:** 5'6"
+**Superpower:** Water Control
+Ripple manipulates water, using its fluidity to trap enemies or create barriers for protection.
+
+**Name:** Starlight
+**Height:** 5'8"
+**Superpower:** Star Energy Manipulation
+Starlight channels the energy of distant stars, unleashing cosmic blasts and providing illumination in darkness.
+
+**Name:** Jolt
+**Height:** 5'10"
+**Superpower:** Electric Speed
+Jolt moves at electrifying speed, striking enemies before they even realize he’s there.
+
+**Name:** Dynamo
+**Height:** 6'1"
+**Superpower:** Energy Manipulation
+Dynamo can generate and control various forms of energy, using them for offensive and defensive tactics.
+
+**Name:** Whirlwind
+**Height:** 5'9"
+**Superpower:** Cyclone Creation
+Whirlwind conjures powerful cyclones, using them to disorient enemies and create barriers.
+
+**Name:** Blazeheart
+**Height:** 6'0"
+**Superpower:** Fire Manipulation
+Blazeheart ignites his passion into flames, using fire as both a weapon and a symbol of hope.
+
+**Name:** Crystalis
+**Height:** 5'7"
+**Superpower:** Crystal Creation
+Crystalis can create and manipulate crystals, forming weapons and shields to protect and empower allies.
+
+**Name:** Holo
+**Height:** 5'10"
+**Superpower:** Holographic Projection
+Holo creates life like holograms, confusing enemies and providing tactical advantages in battle.
+
+**Name:** Inferno
+**Height:** 6'1"
+**Superpower:** Pyrokinesis
+Inferno controls fire, using his powers to engulf enemies in flames while illuminating the path for justice.
+
+**Name:** Echo
+**Height:** 5'9"
+**Superpower:** Sound Manipulation
+Echo can amplify and redirect sound, using sonic waves as weapons and for stealth.
+
+**Name:** Graviton
+**Height:** 6'2"
+**Superpower:** Gravity Manipulation
+Graviton alters gravity around him, allowing for unique movements and incapacitating foes with heavy pressure.
+
+**Name:** Terra
+**Height:** 5'10"
+**Superpower:** Earth Manipulation
+Terra shapes the earth, using it to create barriers and attacks while protecting her allies.
+
+**Name:** Tempest
+**Height:** 6'0"
+**Superpower:** Storm Summoning
+Tempest calls forth storms, unleashing thunder and rain to create chaos among her enemies.
+
+**Name:** Zenith
+**Height:** 6'2"
+**Superpower:** Energy Manipulation
+Zenith channels and amplifies energy, empowering his allies and striking foes with dazzling bursts of power.
+
+**Name:** Silverhawk
+**Height:** 6'1"
+**Superpower:** Enhanced Vision
+Silverhawk possesses extraordinary eyesight, able to see through obstacles and perceive details beyond normal sight.
+
+**Name:** Iron Fist
+**Height:** 5'10"
+**Superpower:** Enhanced Martial Arts
+Iron Fist combines peak physical condition with martial arts mastery, delivering powerful strikes against injustice.
+
+**Name:** Terra Nova
+**Height:** 5'11"
+**Superpower:** Earthquake Generation
+Terra Nova can create tremors, destabilizing enemies and altering the battlefield in his favor.
+
+**Name:** Photon
+**Height:** 5'9"
+**Superpower:** Light Speed Travel
+Photon moves at the speed of light, allowing him to traverse vast distances in an instant.
+
+**Name:** Ember Spirit
+**Height:** 5'8"
+**Superpower:** Flame Manipulation
+Ember Spirit wields fire with precision, crafting barriers of flames and unleashing fiery blasts on foes.
+
+**Name:** Shadow Stalker
+**Height:** 6'0"
+**Superpower:** Invisibility
+Shadow Stalker can cloak himself in shadows, becoming invisible and undetectable to enemies.
+
+**Name:** Tempest
+**Height:** 6'2"
+**Superpower:** Storm Manipulation
+Tempest can summon and control storms, unleashing torrential rain and lightning to combat villains.
+
+**Name:** Guardian
+**Height:** 5'10"
+**Superpower:** Force Field Creation
+Guardian generates protective fields, shielding allies from harm and deflecting incoming attacks.
+
+**Name:** Ironclaw
+**Height:** 6'0"
+**Superpower:** Enhanced Agility
+Ironclaw possesses superhuman agility, allowing him to dodge attacks and move fluidly in combat.
+
+**Name:** Velvet
+**Height:** 5'6"
+**Superpower:** Elasticity
+Velvet can stretch her body to incredible lengths, evading attacks and ensnaring enemies.
+
+**Name:** Hightide
+**Height:** 5'11"
+**Superpower:** Tidal Manipulation
+Hightide controls water levels, creating tidal waves to defend and attack with powerful currents.
+
+**Name:** Aurora
+**Height:** 5'9"
+**Superpower:** Light Manipulation
+Aurora bends light to create dazzling displays, blinding foes and creating illusions in battle.
+
+**Name:** Zephyr
+**Height:** 5'8"
+**Superpower:** Wind Manipulation
+Zephyr controls air currents, using them to propel herself and create powerful gusts against enemies.
+
+**Name:** Cinder
+**Height:** 5'10"
+**Superpower:** Ash Manipulation
+Cinder manipulates ash, creating smoke screens and using it as a weapon against adversaries.
+
+**Name:** Apex
+**Height:** 6'3"
+**Superpower:** Enhanced Senses
+Apex possesses heightened senses, allowing him to detect danger and locate hidden threats easily.
+
+**Name:** Fracture
+**Height:** 5'11"
+**Superpower:** Crystal Generation
+Fracture creates sharp crystals, using them as projectiles or barriers in combat situations.
+
+**Name:** Phantom
+**Height:** 5'10"
+**Superpower:** Ethereal Travel
+Phantom can phase through walls and obstacles, moving effortlessly through the physical realm.
+
+**Name:** Steelheart
+**Height:** 6'0"
+**Superpower:** Metal Manipulation
+Steelheart can control and reshape metal, using it to craft weapons and defenses at will.
+
+**Name:** Frostfire
+**Height:** 5'9"
+**Superpower:** Ice and Fire Manipulation
+Frostfire blends fire and ice, creating powerful attacks that confound enemies and protect allies.
+
+**Name:** Nexus
+**Height:** 6'2"
+**Superpower:** Dimensional Travel
+Nexus can open portals to other dimensions, using them to escape danger or ambush foes.
+
+**Name:** Wraith
+**Height:** 5'8"
+**Superpower:** Ghostly Presence
+Wraith can become intangible, slipping through solid objects and evading detection.
+
+**Name:** Wildfire
+**Height:** 6'0"
+**Superpower:** Pyromancy
+Wildfire controls fire with finesse, creating explosions and fiery shields to protect and defend.
+
+**Name:** Quasar
+**Height:** 5'10"
+**Superpower:** Cosmic Energy Manipulation
+Quasar harnesses the power of cosmic energy, unleashing devastating blasts and creating protective barriers.
+
+**Name:** Glimmer
+**Height:** 5'7"
+**Superpower:** Illumination
+Glimmer emits bright light, blinding foes and illuminating dark areas to reveal hidden threats.
+
+**Name:** Drifter
+**Height:** 5'9"
+**Superpower:** Teleportation
+Drifter can teleport short distances, allowing him to evade attacks and reposition in battle.
+
+**Name:** Razorwind
+**Height:** 6'1"
+**Superpower:** Blade Generation
+Razorwind can create razor-sharp blades from the air, using them for offense and defense.
+
+**Name:** Steelshade
+**Height:** 5'10"
+**Superpower:** Shadow Manipulation
+Steelshade controls shadows, using them to hide, trap enemies, or create deceptive illusions.
+
+**Name:** Tempest
+**Height:** 6'2"
+**Superpower:** Atmospheric Control
+Tempest can alter weather patterns, summoning rain, wind, or calm skies at will.
+
+**Name:** Verity
+**Height:** 5'8"
+**Superpower:** Truth Detection
+Verity can sense lies, exposing deceptions and revealing hidden motives in others.
+
+**Name:** Ironwave
+**Height:** 6'0"
+**Superpower:** Magnetism
+Ironwave controls magnetic fields, manipulating metal objects and creating protective barriers.
+
+**Name:** Spark
+**Height:** 5'6"
+**Superpower:** Electrical Generation
+Spark generates electricity, unleashing stunning bolts and powering devices in emergencies.
+
+**Name:** Monarch
+**Height:** 6'0"
+**Superpower:** Insect Control
+Monarch can communicate with and control insects, using them to gather information and assist in battles.
+
+**Name:** Phantasm
+**Height:** 5'10"
+**Superpower:** Dream Manipulation
+Phantasm can enter dreams, influencing thoughts and creating illusions to confuse foes.
+
+**Name:** Emberstone
+**Height:** 5'9"
+**Superpower:** Lava Control
+Emberstone commands molten rock, creating defensive walls and fiery attacks against adversaries.
+
+**Name:** Mirage
+**Height:** 5'7"
+**Superpower:** Optical Illusions
+Mirage creates realistic illusions, distracting enemies and providing cover for allies.
+
+**Name:** Arctic
+**Height:** 5'11"
+**Superpower:** Cold Manipulation
+Arctic can generate freezing temperatures, creating barriers of ice and immobilizing opponents.
+
+**Name:** Thunderbolt
+**Height:** 6'1"
+**Superpower:** Electromagnetic Manipulation
+Thunderbolt controls electricity and magnetism, creating powerful attacks and shielding allies.
+
+**Name:** Nightingale
+**Height:** 5'6"
+**Superpower:** Sonic Voice
+Nightingale’s voice can create sonic waves, using sound to incapacitate enemies and support allies.
+
+**Name:** Lumos
+**Height:** 5'9"
+**Superpower:** Light Manipulation
+Lumos manipulates light to create blinding flashes and powerful beams to combat darkness.
+
+**Name:** Shard
+**Height:** 6'0"
+**Superpower:** Shard Generation
+Shard can create and control sharp crystal projectiles, launching them at enemies in battle.
+
+**Name:** Viper
+**Height:** 5'10"
+**Superpower:** Poison Control
+Viper can generate and control toxic substances, incapacitating foes and defending against threats.
+
+**Name:** Zenith
+**Height:** 6'2"
+**Superpower:** Celestial Energy Manipulation
+Zenith channels cosmic forces, unleashing devastating blasts while protecting the universe from evil.
+
+**Name:** Quake
+**Height:** 6'1"
+**Superpower:** Seismic Manipulation
+Quake generates tremors, destabilizing opponents and reshaping the battlefield to her advantage.
+
+**Name:** Cobalt
+**Height:** 5'11"
+**Superpower:** Metal Transformation
+Cobalt can alter the properties of metal, reshaping it into weapons and armor as needed.
+
+**Name:** Blaze
+**Height:** 5'8"
+**Superpower:** Fire Breath
+Blaze can breathe fire, using her fiery breath to scorch enemies and create barriers of flame.
+
+**Name:** Spirit
+**Height:** 5'9"
+**Superpower:** Spirit Communication
+Spirit can communicate with and summon spirits, drawing on their wisdom and power in battle.
+
+**Name:** Chroma
+**Height:** 6'0"
+**Superpower:** Color Manipulation
+Chroma controls colors, creating illusions and distractions to confuse enemies in combat.
+
+**Name:** Apex
+**Height:** 5'10"
+**Superpower:** Peak Human Condition
+Apex possesses strength, speed, and agility beyond human limits, excelling in all forms of combat.
+
+**Name:** Echo
+**Height:** 5'8"
+**Superpower:** Sound Manipulation
+Echo can manipulate sound waves, using them to create barriers or disorient opponents.
+
+**Name:** Onyx
+**Height:** 6'1"
+**Superpower:** Shadow Control
+Onyx can manipulate shadows to conceal himself and others, providing strategic advantages in battles.
