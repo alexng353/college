@@ -1,0 +1,45 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{cleveref}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{multicol}
+\usepackage{booktabs}
+
+\begin{document}
+
+\title{Proof that there is no largest integer}
+\author{Alexander Ng}
+\date{October 02, 2024}
+
+\maketitle
+
+Let the domain be the set of integers.
+
+Assume there is a largest integer.
+
+"There is a largest integer" can be rewritten as:
+
+$\exists x \forall y (x > y)$
+
+Consider the case where $y = x + 1$. 
+
+This leads to the statement $(x > x + 1)$, which is a contradiction.
+
+Thus, there does not exist an integer $x$ such that for all integers $y$,
+$x > y$. Therefore, there is no largest integer.
+
+Q.E.D.
+
+\end{document}
