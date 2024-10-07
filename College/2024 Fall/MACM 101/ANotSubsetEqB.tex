@@ -1,0 +1,52 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{cleveref}
+\usepackage{hyperref}
+\usepackage{csquotes}
+
+\begin{document}
+
+\title{MACM 101 Chapter 1.4}
+\author{Alexander Ng}
+\date{September 18, 2024}
+
+\maketitle
+
+\section{A Not Subset of B}
+
+$A \nsubseteq B = \neg(A \subseteq B)$
+
+$= \neg \forall x \in A \implies x \in B$
+
+$\exists \neg (x \in A \implies x \in B)$
+
+$\exists \neg (\neg x \in A \lor x \in B)$
+
+de morgans
+
+$\exist x \in A \land \neg x \in B$
+
+$\exist x \in A \land x \notin B$
+
+\section{$\emptyset$ is a subset of every set}
+
+The empty set is a subset of $A$ unless there is some elemnt in $\emptyset$ 
+that is not in $A$.
+
+So if $\emptyset$ is not a subset of $A$ then there is an element in $\emptyset$.
+
+But, $\emptyset$ has no elements and hence this is a contradiction, so the
+$\emptyset$ must be a subset of $A$
+
+\end{document}

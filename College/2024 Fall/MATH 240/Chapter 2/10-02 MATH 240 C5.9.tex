@@ -1,0 +1,199 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{wasysym}
+
+\begin{document}
+
+\renewcommand{\arraystretch}{1.5} % Adjust row spacing
+\setlength{\arraycolsep}{12pt} 
+
+\title{MATH 240 Lecture 5.9\\Markov Chains (Markov Matrices)}
+\author{Alexander Ng}
+\date{October 02, 2024}
+
+\maketitle
+
+\section{Definitions}
+
+\subsection{Probability Vector}
+
+A probability vector is a vector of probabilitys that sum to 1.
+
+e.g. $\begin{pmatrix} 0.2 & 0.3 & 0.5 \end{pmatrix}$
+
+\subsection{Markov Matrix and Markov Chain}
+
+A Markov Matrix is a square matrix whose columns are probability vectors.
+
+e.g.
+
+\[
+  \begin{bmatrix}
+    \frac{1}{2} & \frac{1}{3} \\
+    \frac{1}{2} & \frac{2}{3} \\
+  \end{bmatrix}
+\]
+
+They are also called stochastic matrices.
+
+Let $x_0$ be a probability vector and M be a Markov Matrix.
+
+Let $x_1=Mx_0$, $x_2=Mx_2$ ... $x_k=Mx_k$ for $k \geq 1$.
+
+Then $x_k$ is a probability vector and the sequence $x_0, x_1, x_2, \dots, x_k$
+is called a \textbf{Markov Chain}.
+
+\subsubsection*{Example}
+
+$x_0 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$
+
+\[
+  x_1 = \begin{bmatrix}
+    \frac{1}{2} & \frac{1}{3}\\
+    \frac{1}{2} & \frac{2}{3}
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+  =
+  \begin{bmatrix}
+    \frac{1}{2} \\
+    \frac{1}{2}
+  \end{bmatrix}
+\]
+
+\[
+  x_2 = \begin{bmatrix}
+    \frac{1}{2} & \frac{1}{3} \\
+    \frac{1}{2} & \frac{2}{3}
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix}
+    \frac{1}{2} \\
+    \frac{1}{2}
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    \frac{5}{12} \\
+    \frac{7}{12}
+  \end{bmatrix}
+.\]
+
+\subsubsection*{Example 2}
+
+In the land of Adanac, there are $3$ political parties, $C$, $L$ and $N$.
+Elections are held every $6$ years. Voting preferences are as follows:
+
+% insert image from slides
+
+If $x_k = \begin{bmatrix} C \\ L \\ N \end{bmatrix}$ is the current vote 
+(state), then, 
+
+\begin{equation*}
+  x_{k+1} =
+  \begin{bmatrix}
+    0.9C + 0.2 L \\
+    0.1C + 0.7L + 0.2N \\
+    0.1L + 0.8N 
+  \end{bmatrix}
+\end{equation*}
+
+\begin{equation*}
+  \begin{bmatrix}
+    0.9 & 0.2 & 0 \\
+    0.1 & 0.7 & 0.2 \\
+    0 & 0.1 & 0.8
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix} C \\ L \\ N \end{bmatrix}
+  =
+  \begin{bmatrix}
+    0.9 C + 0.2 L \\
+    0.1 C + 0.7 L + 0.2 N \\
+    0.1 L + 0.8 N 
+  \end{bmatrix}
+\end{equation*}
+
+\begin{equation*}
+  x_{k+1} = M \cdot x_k
+\end{equation*}
+
+This is a Linear Transformation.
+
+If the current vote is $x_0 = \begin{bmatrix} 0.4 \\ 0.4 \\ 0.2 \end{bmatrix}$,
+what is $x_1$, $x_2$, \dots?
+
+\begin{equation*}
+  x_1 = M \cdot x_0 =
+  \begin{bmatrix}
+    0.9 & 0.2 & 0 \\
+    0.1 & 0.7 & 0.2 \\
+    0 & 0.1 & 0.8
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix} 0.4 \\ 0.4 \\ 0.2 \end{bmatrix}
+  =
+  \begin{bmatrix}
+    0.36 + 0.8 = 0.44 \\
+    0.04 + 0.28 + 0.04 = 0.36 \\
+    0.04 + 0.16 = 0.20
+  \end{bmatrix}
+\end{equation*}
+
+If you continue to do this repeatedly,
+
+\begin{equation*}
+  x_{49} = 
+  \begin{bmatrix}
+    0.5714018 \\
+    0.2857221 \\
+    0.1428760
+  \end{bmatrix}
+\end{equation*}
+
+\begin{equation*}
+  x_{50} = 
+  \begin{bmatrix}
+    0.5714061 \\
+    0.2857208 \\
+    0.1428730
+  \end{bmatrix}
+\end{equation*}
+
+\begin{equation*}
+  \lim_{k \to \infty} x_k = 
+  \begin{bmatrix}
+    \frac{4}{7} \\
+    \frac{2}{7} \\
+    \frac{1}{7}
+  \end{bmatrix}
+\end{equation*}
+
+Let $M$ be a Markov Matrix.
+
+A vector $q$ is called a \textbf{steady state vector} if $Mq = q$. 
+(i.e. the percentage of votes is not changing)
+
+$M$ is said to be regular if $M^k$ has all non-zero positive entries for some
+$k \geq 1$.
+
+If a node returns $100\%$ of the votes, then it is a \textbf{absorbing state}.
+
+\subsection*{Thm.}
+
+If $M$ is regular, then $M$ has a unique steady state probability vector $q$
+such that $Mq = q$. Moreover, if $x_0$ is \textbf{any} initial probability vector,
+then $\lim_{k \to \infty} x_k = q$. (i.e. the Markov Chain Sequence converges)
+
+Assumption: The probabilities ($m_{ij}$) in the Markov Matrix \textbf{do not change}
+
+\end{document}

@@ -3,10 +3,8 @@ import fs from "fs/promises";
 const templateData = await fs.readFile("./documentTemplate.txt", "utf-8");
 
 const input = `
-Section 1.5: 2, 10, 24, 26.
-Section 1.6: 2, 6, 12, 18, 20, 28.
-Section 1.7: 2, 4, 8, 14, 24, 34, 40, 44.
-Section 1.8: 4, 6, 10, 34.
+Section 2.1: 12, 34, 44, 50.
+Section 2.2: 6, 8, 10.
 `.trim();
 
 const splits = input.split("\n");

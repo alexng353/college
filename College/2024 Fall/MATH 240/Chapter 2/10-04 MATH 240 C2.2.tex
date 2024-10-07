@@ -1,0 +1,235 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{wasysym}
+
+\begin{document}
+
+\renewcommand{\arraystretch}{1.25} % Adjust row spacing
+\setlength{\arraycolsep}{12pt} 
+
+\title{MATH 240 Lecture 2.2\\The Inverse $A^{-1}$ of a matrix $A$}
+\author{Alexander Ng}
+\date{October 04, 2024}
+
+\maketitle
+
+$A+B$, $A-B$, $r \cdot A$, $A\cdot B$, $A^T$, $A^{-1}$
+
+Let $I_n$ be the $n \times n$ identity matrix. (Matrix property 5);
+
+\[
+  \begin{bmatrix}
+    1 & ... & 0 \\
+    ... & 1 & ... \\
+    0 & ... & 1
+  \end{bmatrix}
+\]
+
+$A \cdot I_n = A$ and $I_n \cdot A = A$. (Matrix multiplication by the Identity
+Matrix is commutative).
+
+\section{Definition of the Inverse}
+
+Let $A$ be an $n \times n$ matrix. (The definition of the inverse of a matrix is
+only for square matrices.)
+
+$A$ is \textbf{invertible} or \textbf{nonsingular} if there exists an $n \times n$
+matrix $C$ such that $AC = CA = I_n$.
+
+$C$ is unique. (Theorem)
+
+\subsection{Proof of the Uniqueness of $C$}
+
+Suppose $C$ and $B$ are inverses of $A$.
+
+\[
+  AC = I_n \text{ and } AB = I_n \text{ and } CA = I_n \text{ and } CB = I_n
+\]
+
+Using the fact that $AC = I_n$, substitute in $AC$ as $I_n$ in $B = B \cdot I_n$.
+
+$B = B \cdot I_n = B(AC) = (BA)C = I_n \cdot C = C$
+
+$\qed$
+
+\section{Forgot Name}
+
+In $\mathbb{R}$, 
+
+\begin{align*}
+  ax &= b \\
+  x &= b/a \\
+  x &= a^{-1}b \{ a \neq 0 \}
+\end{align*}
+
+in $\mathbb{R}^n$,
+
+\begin{align*}
+  Ax &= b \\
+  x &= A^{-1}b \{ A \text{ is invertible} \}
+\end{align*}
+
+If $A$ is an invertible matrix, then the linear system $Ax=b$ has the unique
+solution $x = A^{-1}b$.
+
+\subsection{Proof}
+
+\begin{align*}
+  Ax &= b \\
+  \text{Is } A(A^{-1}b) &= b \\
+  \\
+  A(A^{-1}b) &= b \\
+             &= (A A^{-1})b \\
+             &= b 
+\end{align*}
+
+Suppose $Au = b$ and $Av = b$. $\implies Au = Av$.
+
+$A$ is invertible $\implies A^{-1} \implies A^{-1} (Au) = A^{-1} (Av) = b$.
+
+$A^{-1} (Au) = (A^{-1}A)u = u$.
+
+$A^{-1} (Av) = (A^{-1}A)v = v$.
+
+$\therefore u = v$.
+
+$\qed$
+
+\section{Theorem 6 (Properties of $A^{-1}$)}
+
+\begin{enumerate}[label=(\alph*)]
+  \item If $A$ is invertible, then $A^{-1}$ is also invertible and $(A^{-1})^{-1} = A$.
+  \item If $A$ and $B$ are invertible, then $(AB)^{-1} = B^{-1}A^{-1}$.
+  \item If $A$ is invertible, $A^T$ is also invertible and $(A^T)^{-1} = (A^{-1})^T$.
+\end{enumerate}
+
+\subsection{Proof of (b)}
+
+Apply the Associative Law over and over again.
+
+$(AB)(B^{-1}A^{-1}) = A(B(B^{-1}A^{-1})) = A((BB^{-1})A^{-1}) = A(I_nA^{-1}) 
+= A(A^{-1}) = I_n$.
+
+Prove $(B^{-1}A^{-1}) (AB) = I_n$. (do it at home)
+
+\subsection{Exercise 2.2-25}
+
+Suppose $A$, $B$ and $C$ are invertible. So $A^{-1}$, $B^{-1}$ and $C^{-1}$ exist.
+
+Find $A\cdot B\cdotC)^{-1} = ((AB)\cdot C)^{-1}$.
+
+\section{How to find the inverse of a matrix}
+
+Is $A = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}$ invertible? If so, find
+$A^{-1}$.
+
+Let's find $C$ such that $AC=I_n$. Then check $CA=I_n$.
+
+\[
+  \begin{bmatrix}
+    0 & 1 \\
+    -1 & 0
+  \end{bmatrix}
+  \begin{bmatrix}
+    a & b \\
+    c & d
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    1 & 0 \\
+    0 & 1
+  \end{bmatrix}
+\]
+
+\[
+  \begin{bmatrix}
+    c & d \\
+    -a & -b
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    1 & 0 \\
+    0 & 1
+  \end{bmatrix}
+\]
+
+\[
+  \begin{bmatrix}
+    c = 1, d = 0 \\
+    a = 0, b = 1
+  \end{bmatrix}
+  \implies
+  C =
+  \begin{bmatrix}
+    0 & -1 \\
+    1 & 0
+  \end{bmatrix}
+\]
+
+Check (at home).
+
+\subsection{Theorem}
+
+Let $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$. If $ad-bc \neq 0$, then
+$A$ is invertible.
+
+And $A^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$.
+
+The thingie $ad-bc$ is called the \textbf{determinant} of $A$. (This will be
+part of Ch.3)
+
+\subsection{Theorem 7 (The most beautiful algorithm)}
+
+An $n\times n$ matrix $A$ is invertible $\iff A \sim I_n$.
+
+? Calculate $A^{-1}$. Let's find $C$ such that $AC=I_n$. Then check $CA=I_n$.
+
+Calculate the inverse of $A=\begin{bmatrix} 1 & 1 \\ 2 & 1 \end{bmatrix}$.
+
+\[
+  \left[
+    \begin{array}{cc|cc}
+      1 & 1 & 1 & 0 \\
+      2 & 1 & 0 & 1 \\
+    \end{array}
+  \right]
+\]
+
+$R_2 \to R_2 - 2R_1$
+
+\[
+  \left[
+    \begin{array}{cc|cc}
+      1 & 1 & 1 & 0 \\
+      0 & -1 & -2 & 1 \\
+    \end{array}
+  \right]
+\]
+
+$R_1 \to R_1 + R_2$
+
+$R_2 \to -R_2$
+
+\[
+  \left[
+    \begin{array}{cc|cc}
+      1 & 0 & -1 & 1 \\
+      0 & 1 & 2 & -1 \\
+    \end{array}
+  \right]
+\]
+
+Calculate $A \cdot A^{-1}$ (at home).
+
+\end{document}

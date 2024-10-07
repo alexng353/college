@@ -1,0 +1,250 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{wasysym}
+
+\begin{document}
+
+\renewcommand{\arraystretch}{1.25} % Adjust row spacing
+\setlength{\arraycolsep}{12pt} 
+
+\title{MATH 240 Lecture 2.2\\The Inverse $A^{-1}$ of a matrix $A$}
+\author{Alexander Ng}
+\date{October 07, 2024}
+
+\maketitle
+
+Let $A$ be an $n \times n$ matrix. $A$ is invertible if there is an $n \times n$
+matrix $A^{-1}$, called the inverse of $A$, such that $AA^{-1} = A^{-1}A = I_n$.
+
+\textbf{Theorem 7 - C2.2} $A$ is invertible $\iff A \sim I_n$.
+
+($\implies$) If $A$ is invertible, then $A \sim I_n$.
+
+($\impliedby$) If $A \sim I_n$, then $A$ is invertible.
+
+\subsection*{Proof of Theorem 7-2.2}
+
+Suppose $A$ is invertible. Then $A^{-1}$ exists. Let $A \sim B$ where $B$ is
+in REF.
+\indent (Th5-2.2) If $A$ is invertible, then $Ax=b$ has a unique solution.
+\indent (Th4-1.4) $B$ in REF has a pivot position in every row
+
+We know $A$ is square $\implies B = \begin{bmatrix}p_1 & x & x \\ 0 & p_2 & x \\ 0 & 0 & p_3 \end{bmatrix}$
+where $p$ are pivots. We can then apply row operations to $B$ to get $B'$ in RREF. 
+$B'$ in RREF = $I_n$
+
+\subsection*{Elementary Matrices}
+Every elementary row operation corresponds to a multiplication of $A$ by an 
+$n \times n$ elemtary matrix $E$, i.e. if $A \sim B$, then $B = EA$. Since row 
+operations are invertible, $E$ is invertible.
+
+\subsubsection*{Example}
+
+For $n=3$ and $R_2 \gets R_2 - 2R_1$, find $E$ and $E^{-1}$.
+
+Start with the $I_n$, $I_3$.
+
+\[
+  I_3 =
+  \begin{bmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+  \end{bmatrix}
+\]
+
+Apply $R_2 \gets R_2 - 2R_1$ to $I_3$.
+
+\[
+  E = 
+  \begin{bmatrix}
+    1 & 0 & 0 \\
+    -2 & 1 & 0 \\
+    0 & 0 & 1
+  \end{bmatrix}
+\]
+
+Check.
+
+\[
+  EA =
+  \begin{bmatrix}
+    1 & 0 & 0 \\
+    -2 & 1 & 0 \\
+    0 & 0 & 1
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix}
+    a & b & c \\
+    u & v & w \\
+    x & y & z
+  \end{bmatrix}
+\]
+
+\[
+  \begin{bmatrix}
+    a & b & c \\
+    -2a+u & -2b+v & -2c+w \\
+    x & y & z
+  \end{bmatrix}
+\]
+
+Find the inverse.
+
+\[
+  I_3 =
+  \begin{bmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+  \end{bmatrix}
+\]
+
+Apply the \textbf{Inverse} of the row operation to $I_3$.
+
+$R_2 \gets R_2 + 2R_1$
+
+\[
+  E^{-1} =
+  \begin{bmatrix}
+    1 & 0 & 0 \\
+    2 & 1 & 0 \\
+    0 & 0 & 1
+  \end{bmatrix}
+\]
+
+% HOMEWORK:
+
+Check $E E^{-1} = I_3$.
+
+Check $E^{-1} E = I_3$.
+
+
+\subsection*{Proof of Part 2 of Theorem 7-2.2}
+
+Suppose $A\sim I$. \qquad $A \sim A_1 \sim A_2 \dots A_{m-1} \sim I$
+
+$= E_1 A_1 \dots E_m A_m = I$
+
+Let $E_1 = E_2 \dots E_m$ be the elementary matrices corresponding to the row 
+operations in $A \sim I$.
+
+So,
+
+\begin{align*}
+  A_1 &= E_1 \cdot A \\
+  A_2 &= E_2 \cdot A_1 \\
+  \vdots \\
+  I &= E_m \cdot A_{m-1}
+\end{align*}
+
+Because $A_2 = E_2 \cdot A_1$, we can write $A_2 = E_2 \cdot (E_1 \cdot A)$.
+
+\[
+  I = E_m(\dots(E_2 \cdot (E_1 \cdot A))) = (E_m \dots E_2 \cdot E_1) \cdot A
+.\]
+
+We can call the matrix product $E_m \dots E_2 \cdot E_1$ the equivalent matrix $C$.
+
+We now have $CA=I$. Is $AC=I$?
+
+We know that $E_1, E_2, \dots, E_m$ are invertible.
+
+\indent\textbf{Theorem 6b-2.2} $(ABC)^{-1} = C^{-1}B^{-1}A^{-1}$
+
+$C^{-1} = E_1^{-1} \cdot E_2^{-1} \dots E_m^{-1}$
+
+$CA = I$
+
+$C^{-1}(CA) = C^{-1}I$
+
+$(C^{-1}C) A = C^{-1}I \implies A = C^{-1} \implies AC = C^{-1}C = I$
+
+\section*{Invertible Linear Transformations}
+
+Suppose $T: \mathbb{R}^n \to \mathbb{R}^n$ is a linear transformation.
+T is invertible if there exists another linear transformation 
+$S: \mathbb{R}^n \to \mathbb{R}^n$ such that.
+
+\begin{enumerate}
+  \item $S(T(x)) = x$
+  \item $T(S(y)) = y$
+\end{enumerate}
+
+\subsection*{Theorem 9}
+
+Let $T: \mathbb{R}^n \to \mathbb{R}^n$ be a linear transformation with standard
+matrix $A$ so $T(x) = Ax$.
+
+$T$ is invertible $\iff A$ is invertible.
+
+\subsubsection*{Proof of Theorem 9}
+
+\noindent
+
+\textbf{Part 1}
+
+$(\impliedby)$ If $T$ is invertible, then $A$ is invertible.
+
+Assume $A$ is invertible. So $A^{-1}$ exists.
+
+Consider $S(y) = A^{-1}y$. Then, 
+
+\begin{equation}
+  S(T(X)) = S(Ax) = A^{-1}(Ax) = (A^{-1}A)x = Ix = x
+\end{equation}
+
+\begin{equation}
+  T(S(X)) = T(A^{-1}x) =  A(A^{-1}x) = (A^{-1}A)x = Ix = x
+\end{equation}
+
+\textbf{Part 2}
+
+$(\implies)$ If $A$ is invertible, then $T$ is invertible.
+
+Assume $T(x) = Ax$ is invertible.
+
+Let $S$ be the inverse of $T$. S is a Linear Transformation. So, let $S(y) = Cy$,
+where $C$ is the standard matrix of $S$.
+
+$S(T(x)) = x \implies C(Ax) = x \implies (CA) x = x. \forall x \in \mathbb{R}^n$
+
+$\implies (CA)e_i=e_i$
+
+\[
+  CA = 
+  (CA)
+  \begin{bmatrix}
+    \vdots & \vdots & & \vdots\\
+    e_i & e_2 & \dots & e_n\\
+    \vdots & \vdots & & \vdots
+  \end{bmatrix}
+  = \begin{bmatrix}
+    (CA)e_1 & (CA)e_2 & \dots & (CA)e_n
+  \end{bmatrix} 
+\]
+
+
+\[
+  = \begin{bmatrix}
+    e_1 & e_2 & \dots & e_n
+  \end{bmatrix}
+  = I_n
+\]
+
+We have $CA=I_n$. Is $AC=I_n$?
+
+Yes, by IMT.
+
+\end{document}
+
