@@ -131,15 +131,14 @@ int main() {
 
   int lineCounter = 0;
 
-  while (fgets(buf, sizeof(buf), file) != NULL) {
+  // while (fgets(buf, sizeof(buf), file) != NULL) {
+  while (!feof(file)) {
+    fgets(buf, sizeof(buf), file);
+
     if (used == cap) {
       // Grow by 2x cap
       cap *= 2;
       heroArray = (Superhero **)realloc(heroArray, sizeof(Superhero *) * cap);
-    }
-
-    if (used > 98) {
-      printf("%s", buf);
     }
 
     if (((lineCounter % 5) == 4 && lineCounter != 0)) {
@@ -170,10 +169,10 @@ int main() {
 
   char *separator = centerEqual("");
 
-  // for (int i = 0; i < used; i++) {
-  // printHero(heroArray[i], i);
-  // printf("%s\n", separator);
-  // }
+  for (int i = 0; i < used; i++) {
+    printHero(heroArray[i], i);
+    printf("%s\n", separator);
+  }
 
   printf("cap: %d; used: %d\n", cap, used);
 
