@@ -44,7 +44,7 @@ char *centerEqual(const char *str) {
     for (int i = 0; i < 60; i++) {
       buf[i] = '=';
     }
-    buf[61] = '\0';
+    buf[60] = '\0';
 
     return buf;
   }
@@ -55,7 +55,7 @@ char *centerEqual(const char *str) {
     return NULL;
   }
 
-  int lenOfSide = 30 - (len / 2) - 1;
+  int lenOfSide = 30 - (len / 2);
 
   char *rightSide = (char *)malloc(sizeof(char) * lenOfSide);
   char *leftSide = (char *)malloc(sizeof(char) * lenOfSide);
@@ -65,11 +65,15 @@ char *centerEqual(const char *str) {
     rightSide[i] = '=';
   }
 
+  leftSide[lenOfSide - 1] = '\0';
+  rightSide[lenOfSide - 1] = '\0';
+
   if (isOdd) {
-    rightSide[lenOfSide - 1] = ' ';
+    rightSide[lenOfSide - 2] = '\0';
   }
 
-  char *buf = (char *)malloc(sizeof(char) * 61);
+  char *buf = (char *)malloc(sizeof(char) * 80);
+  buf[0] = '\0';
 
   strcat(buf, leftSide);
   strcat(buf, " ");
