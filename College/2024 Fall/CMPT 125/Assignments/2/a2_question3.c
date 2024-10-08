@@ -183,7 +183,7 @@ int main() {
 
   free(heroArray);
   fclose(file);
-  // free(separator);
+  free(separator);
 
   return 0;
 }
