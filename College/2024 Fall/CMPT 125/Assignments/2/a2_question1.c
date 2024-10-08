@@ -16,6 +16,8 @@ int replaceDigitHelper(int number, int target, int replacement, int place) {
   }
 
   // Recursively process the remaining digits
+  // By adding the replaced lastDigit * the place value, we effectively replace
+  // the digit in the nth place with the replaced value.
   return replaceDigitHelper(number / 10, target, replacement, place * 10) +
          lastDigit * place;
 }
