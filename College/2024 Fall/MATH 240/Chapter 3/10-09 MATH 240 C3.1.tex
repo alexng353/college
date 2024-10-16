@@ -1,0 +1,268 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{wasysym}
+
+\begin{document}
+
+\renewcommand{\arraystretch}{1.25} % Adjust row spacing
+\setlength{\arraycolsep}{12pt} 
+
+\title{MATH 240 Lecture 3.1\\The Determinant of a Matrix}
+\author{Alexander Ng}
+\date{October 07, 2024}
+
+\maketitle
+
+\subsection*{Definition - The Determinant of a Matrix}
+
+Let $A$ be an $n \times n$ matrix. The $ij^{th}$ minor of $A$, denoted $A_{ij}$,
+is the $(n-1)\times (n-i)$ matrix obtained from $A$ by deleting the $i$th row
+and $j$th column.
+
+Example:
+
+\[
+  A = \begin{bmatrix}
+    a_{11} & a_{12} & a_{13}\\
+    a_{21} & a_{22} & a_{23}\\
+    a_{31} & a_{32} & a_{33} 
+  \end{bmatrix}
+\]
+
+\[
+  A_{21} = \begin{bmatrix}
+    a_{11} & a_{13}\\
+    a_{31} & a_{33}
+  \end{bmatrix}
+.\]
+
+The determinant of $A$, denoted $\det(A)$ or $|A|$ is a number defined by
+
+\subsubsection*{Example}
+
+\[
+  \det{
+    \begin{bmatrix}
+      7 & 9 & 1\\
+      1 & 2 & 3 \\
+      0 & 5 & 6
+    \end{bmatrix}
+  }
+  =
+  7 \cdot \det{
+    \begin{bmatrix}
+      2 & 3 \\
+      5 & 6
+    \end{bmatrix}
+  }
+  -
+  9 \cdot \det{
+    \begin{bmatrix}
+      1 & 3 \\
+      0 & 6
+    \end{bmatrix}
+  }
+  +
+  1 \cdot \det{
+    \begin{bmatrix}
+      1 & 2 \\
+      0 & 5
+    \end{bmatrix}
+  }
+\]
+
+\[
+  7 \cdot (12 - 15) + 9 \cdot (6 - 0) + 1 \cdot (5 - 0)
+\]
+
+\[
+-21 -54 +5 = -70
+.\]
+
+\subsubsection*{Example 2}
+
+\[
+  \det{
+    \begin{bmatrix}
+      7 & 0 & 0 \\
+      1 & 2 & 0 \\
+      0 & 5 & 6
+    \end{bmatrix}
+  }
+  =
+  7 \cdot \det{
+    \begin{bmatrix}
+      2 & 0 \\
+      5 & 6
+    \end{bmatrix}
+  }
+  -
+  0 \cdot \det{
+    \begin{bmatrix}
+      1 & 0 \\
+      0 & 6
+    \end{bmatrix}
+  }
+  +
+  0 \cdot \det{
+    \begin{bmatrix}
+      1 & 2 \\
+      0 & 5
+    \end{bmatrix}
+  }
+.\]
+
+\[
+  7 \cdot (2 \cdot 6 - 0 \cdot 5) - 0 \cdot (1 \cdot 6 - 0 \cdot 5) + 0 \cdot (1 \cdot 2 - 0 \cdot 5)
+.\]
+
+\[
+  7 \cdot 2 \cdot 6 = 84
+.\]
+
+\subsection*{Theorem 2}
+
+\[
+  \text{Let } U = \begin{bmatrix} 
+    u_{11} & 0 & 0 & \dots & 0 \\
+    u_{21} & u_{22} & 0 & \dots & 0 \\
+    u_{31} & u_{32} & u_{33} & \dots & 0 \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    u_{n1} & u_{n2} & u_{n3} & \dots & u_{nn}
+  \end{bmatrix}
+.\]
+
+$U$ is known as a \textbf{Lower Triangular Matrix}. When $U$ is a lower
+triangular matrix, the determinant of $U$ is the product of the diagonal
+elements of $U$.
+
+There may be multiple matrices that have the same determinant.
+
+\subsection*{Corollary}
+
+\[
+  \text{Let } A = \begin{bmatrix}
+    a_{11} & 0 & 0 & \dots & 0 \\
+    0 & a_{22} & 0 & \dots & 0 \\
+    0 & 0 & a_{33} & \dots & 0 \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    0 & 0 & 0 & \dots & a_{nn}
+  \end{bmatrix}
+.\]
+
+\begin{equation*}
+  \det(A) = a_{11} \cdot a_{22} \cdot a_{33} \cdot \dots \cdot a_{nn}
+\end{equation*}
+
+\begin{equation*}
+  \det(I) = 1
+\end{equation*}
+
+\section*{Def.}
+
+Let $A$ be an $n \times n$ matrix. The $ij^{th}$ cofactor of $A$ is 
+$C_{ij} = (-1)^{i+j} \det(A_{ij})$.
+
+\subsection*{Theorem 1}
+
+$\det(A)$ can be computed by expanding along row $i$ or down col. $j$. as follows:
+
+\begin{equation*}
+  \det(A) = a_{i1} C_{i1} + a_{i2} C_{i2} + \dots + a_{in} C_{in} \to \text{row i}
+\end{equation*}
+
+\begin{equation*}
+  \det(A) = a_{1j} C_{1j} + a_{2j} C_{2j} + \dots + a_{nj} C_{nj} \to \text{col j}
+\end{equation*}
+
+\subsubsection*{Example}
+
+\[
+  \text{Let } A = \begin{bmatrix}
+    7 & 9 & 1\\
+    1 & 2 & 3 \\
+    0 & 5 & 6
+  \end{bmatrix}
+.\]
+
+We should choose the first column to expand along since there is a $0$ entry and
+a $1$ entry in the first column.
+
+\begin{equation*}
+  \det(A) = a_{11} \cdot (-1)^{1+1} \cdot \det(A_{11}) 
+  + a_{21} \cdot (-1)^{1+2} \cdot \det(A_{21}) 
+  + a_{31} \cdot (-1)^{1+3} \cdot \det(A_{31})
+\end{equation*}
+
+\begin{equation*}
+  = 7 \cdot 1 \cdot \det(\begin{bmatrix}
+    2 & 3 \\
+    5 & 6
+  \end{bmatrix})
+  + 1 \cdot (-1) \cdot \det(\begin{bmatrix}
+    9 & 1 \\
+    5 & 6
+  \end{bmatrix})
+  + \mathbf{0}
+\end{equation*}
+
+\begin{equation*}
+  = 7 \cdot (12 - 15) + (54 - 5) + 0 = -70
+\end{equation*}
+
+\subsection*{Properties of the Determinant}
+
+\subsubsection*{Theorem 4 (Gun #13 IMT)}
+
+$A$ is invertible $\iff \det(A) \neq 0$
+
+\subsubsection*{Theorem 5}
+
+$\det(A^T) = \det(A)$
+
+\subsubsection*{Theorem 6}
+
+$\det(AB) = \det(A) \cdot \det(B)$
+
+\subsubsection*{Determinant of the Sum of Matrices}
+
+Is $\det(A+B) = \det(A) + \det(B)$? No!
+
+\[
+  I = \begin{bmatrix}
+    1 & 0\\
+    0 & 1
+  \end{bmatrix}
+  = \begin{bmatrix}
+    1 & 0 \\
+    0 & 0
+  \end{bmatrix}
+  + \begin{bmatrix}
+    0 & 0 \\
+    0 & 1
+  \end{bmatrix}
+\]
+
+Clearly, $\det(I) = 1$. However, $\det(A+B) = \det(A) + \det(B)$ is false by
+contradiction, since any matrix with a $0$ row or column has $\det(A) = 0$.
+
+\[
+ 1 \neq 0 + 0
+.\]
+
+\subsubsection*{Proof of Theorem 5}
+
+
+
+\end{document}

@@ -25,7 +25,115 @@
 \maketitle
 
 \subsection*{Question 6}
+
+\subsubsection*{Part a}
+
+$A \cup \emptyset = A$
+
+$A \cup B = \{ x \left| x \in A \lor x \in B \right.\}$
+
+By definition, $A \cup \emptyset = \{ x \left| x \in A \lor x \in \emptyset \right.\}$
+
+The empty set does not contain any elements, so $x \notin \emptyset$
+
+$A \cup \emptyset = \{ x \left| x \in A \lor \mathbf{F} \right.\}$
+
+By the Identity Laws of Propositional Logic, $p \lor \mathbf{F} = p$
+
+$A \cup \emptyset = \{ x \left| x \in A \right.\}$
+
+$\therefore A \cup \emptyset = A$
+
+\subsubsection*{Part b}
+
+$A \cap U = A$
+
+$A \cap B = \{ x \left| x \in A \land x \in B \right.\}$
+
+By definition, $A \cap U = \{ x \left| x \in A \land x \in U \right.\}$
+
+Because $U$ is the universal set, $x \in U \equiv \mathbf{T}$
+
+So, $A \cap U = \{ x \left| x \in A \land \mathbf{T} \right.\}$
+
+By the Identity Laws of Propositional Logic, $p \land \mathbf{T} = p$
+
+$A \cap U = \{ x \left| x \in A \right.\}$
+
+$\therefore A \cap U = A$
+
 \subsection*{Question 8}
+
+% Prove the idempotent laws in Table 1 by showing that
+% a) A ∪ A= A.
+% b) A ∩ A= A.
+
+\subsubsection*{Part a}
+
+$A \cup A = A$
+
+By definition, $A \cup A = \{ x \left| x \in A \lor x \in A \right.\}$
+
+The left and right side of the disjunction are the same set, so by the 
+Idempotent Law of Propositional Logic, $p \lor p \equiv p$,
+
+$x \in A \lor x \in A \equiv x \in A$
+
+$A \cup A = \{ x \left| x \in A \right.\}$
+
+$\therefore A \cup A = A$
+
+\subsubsection*{Part b}
+
+$A \cap A = A$
+
+By definition, $A \cap A = \{ x \left| x \in A \land x \in A \right.\}$
+
+The left and right side of the conjunction are the same set, so by the 
+Idempotent Law of Propositional Logic, $p \land p \equiv p$,
+
+$x \in A \land x \in A \equiv x \in A$
+
+$A \cap A = \{ x \left| x \in A \right.\}$
+
+$\therefore A \cap A = A$
+
 \subsection*{Question 10}
+
+\subsubsection*{Part a}
+
+$A - \emptyset = A$
+
+$= A \cap \overline{\emptyset}$
+
+The complement of the empty set is the universal set, so $\overline{\emptyset} = U$
+
+By Question 6, Part b, $A \cap U = A$
+
+$= A \cap U = A$
+
+$\therefore A - \emptyset = A$
+
+\subsubsection*{Part b}
+
+$\emptyset - A = \emptyset$
+
+By definition, 
+
+$= \emptyset \cap \overline{A}$
+
+By definition,
+
+$= \{ x \left| x \in \emptyset \land x \in \overline{A} \right.\}$
+
+Because $x \in \emptyset \equiv \mathbf{F}$
+
+$= \{ x \left| \mathbf{F} \land x \in \overline{A} \right.\}$
+
+By the Domination Laws of Propositional Logic, $p \land \mathbf{F} = \mathbf{F}$
+
+$= \{ x \left| \mathbf{F} \right.\}$
+
+$\therefore \emptyset - A = \emptyset$
 
 \end{document}

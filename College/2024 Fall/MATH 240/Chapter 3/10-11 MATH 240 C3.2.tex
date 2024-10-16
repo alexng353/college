@@ -1,0 +1,167 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{wasysym}
+
+\begin{document}
+
+\renewcommand{\arraystretch}{1.25} % Adjust row spacing
+\setlength{\arraycolsep}{12pt} 
+
+\title{MATH 240 Lecture 3.1\\Properties of Determinants}
+\author{Alexander Ng}
+\date{October 07, 2024}
+
+\maketitle
+
+Let $A$ be an $3 \times 3$ matrix.
+
+\[
+  A = \begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+    \end{bmatrix}
+.\]
+
+The $(1, 2)$ minor of $A$ is
+
+\[
+  A_{12} = \begin{bmatrix}
+    a_{21} & a_{23} \\
+    a_{31} & a_{33}
+  \end{bmatrix}
+\]
+
+\subsubsection*{Definition}
+
+Let $A$ be an $n \times n$ matrix. The determinant of $A$ is defined as.
+
+$\det(A) = \begin{cases}
+  n=1 & a_{11}\\
+  n > 1& a_{11} \cdot \det(A_{11}) - a_{12} \cdot \det(A_{12}) + \dots 
+  + (-1)^{n-1} \cdot a_{n1} \cdot \det(A_{1n})
+\end{cases}$
+
+Let $M$ be the number of multiplications in this formula.
+
+\[
+  M = \begin{cases}
+    n=1 & 0 \\
+    n=2 & 2 \\
+    n>2 & n \cdot M(n-1) + n.
+  .\end{cases}
+.\]
+
+So, the number of multiplications to compute the determinant grows exponentially.
+
+\begin{align}
+  M(3) &= 3 \cdot M(2) + 3 = 3 \cdot 2 \cdot 3 = 9\\
+  M(4) &= 4 \cdot M(3) + 4 = 4 \cdot 3 \cdot 4 = 40\\
+  M(20) &= 4.1 \times 10^{18} \sim \text{ 132 years at } 10^{9} \text{ multiplications per second}
+\end{align}
+
+\section{Theorem.}
+
+\begin{enumerate}[label=(\alph*)]
+\item If $A \sim B$ via $R_i \gets R_i + s \cdot R_j$, then $\det(B) = \det(A)$.
+\item If $A \sim B$ via $R_i \leftrightarrow R_j, i \neq j$, then $\det(B) = -\det(A)$.
+\item If $A \sim B$ via $R_i \gets s R_i, s \neq 0$, then $\det(B) = s \cdot \det(A)$.
+\end{enumerate}
+
+This means if we use row reduction (Gaussian Elimination),
+
+\[
+  A \sim A_n \text{ in REF}
+\]
+
+then we can get $\det(A)$ from $\det(A_n)$.
+
+\subsection{Example}
+
+\begin{equation*}
+  A=  \begin{bmatrix}
+    3 & 2 & 1 \\
+    0 & 1 & 1 \\
+    1 & 1 & 0
+  \end{bmatrix}
+\end{equation*}
+
+$R_3 \gets 3R_3$
+
+
+\begin{equation*}
+  B= \begin{bmatrix}
+    3 & 2 & 1 \\
+    0 & 1 & 1 \\
+    3 & 3 & 0
+  \end{bmatrix}
+\end{equation*}
+
+$R_3 \gets R_3 - R_1$
+
+
+\begin{equation*}
+  C=\begin{bmatrix}
+    3 & 2 & 1 \\
+    0 & 1 & 1 \\
+    0 & 1 & -1
+  \end{bmatrix}
+\end{equation*}
+
+$R_3 \gets R_3 - R_2$
+
+
+\begin{equation*}
+  D= \begin{bmatrix}
+    3 & 2 & 1 \\
+    0 & 1 & 1 \\
+    0 & 0 & -2
+  \end{bmatrix}
+\end{equation*}
+
+$A$ in REF. (Upper Triangular)
+
+$\det(B) = 3\det(A)$
+
+$\det(B) = \det(C) = \det(D)$
+
+\begin{align*}
+  \det(D) &= \det(D^T)\\
+          &= \det(\begin{bmatrix}
+    3 & 0 & 0 \\
+    2 & 1 & 0 \\
+    1 & 1 & -2
+  \end{bmatrix})\\
+          &= 3 \cdot 1 \cdot (-2) \\
+          &= -6
+\end{align*}
+
+\begin{align*}
+  \det(B) &= -6 = 3 \cdot \det(A) \\
+  \det(A) &= \frac{-6}{3} = -2
+\end{align*}
+
+Gaussian Elimination does $\sim \frac{1}{3} n^3$ multiplications.
+
+\[
+  \begin{cases}
+    n=20 & \frac{20^3}{3} = 2666\\
+    n=1000 & \frac{1000^3}{3} = 333,333,333 < 10^9 < \text{ 1 second}
+  \end{cases}
+\]
+
+Proof of $(c)$
+
+\end{document}

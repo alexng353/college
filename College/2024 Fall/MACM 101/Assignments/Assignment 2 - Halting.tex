@@ -1,0 +1,74 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{cleveref}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{multicol}
+\usepackage{booktabs}
+
+\begin{document}
+
+\title{MACM 101 Chapter 2 Homework - Halting Problem}
+\author{Alexander Ng}
+\date{October 11, 2024}
+
+\maketitle
+
+Assume $H$ is a Turing machine that solves the halting problem.
+
+This function takes an input $P$, which is a program, and $x$, which is an
+input to the program, and returns $\mathbf{T}$ if $P$ halts on input $x$, and 
+$\mathbf{F}$ otherwise.
+
+\begin{equation*}
+  H(P, x) = \begin{cases}
+    P \text{ halts on } x & \mathbf{T} \\
+    P \text{ does not halt on } x & \mathbf{F}
+  \end{cases}
+\end{equation*}
+
+Let $D$ be another Turing machine that takes an input $P$, which is a program,
+and returns $H(P, P)$. That is, $D$ takes a program $P$ as input and returns
+$\mathbf{T}$ if $P$ halts on $P$, and $\mathbf{F}$ otherwise.
+
+\begin{equation*}
+  D(P) = \begin{cases}
+    H(P, P) & \text{ D never halts} \\
+    & \text{ D halts immediately}
+  \end{cases}
+\end{equation*}
+
+Consider $D(D)$:
+
+\begin{equation*}
+  D(D) = \begin{cases}
+    \text{If } H(D, D) = \mathbf{T}, \text{ then } D(D) \text{ goes into an infinite loop.} \\
+    \text{If } H(D, D) = \mathbf{F}, \text{ then } D(D) \text{ halts immediately.}
+  \end{cases}
+\end{equation*}
+
+Now:
+
+\begin{itemize}
+  \item If $H(D, D) = \mathbf{T}$, this implies $D(D)$ should halt, but by the definition of $D$, if $H(D, D) = \mathbf{T}$, $D(D)$ enters an infinite loop, which is a contradiction.
+  \item If $H(D, D) = \mathbf{F}$, this implies $D(D)$ does not halt, but by the definition of $D$, if $H(D, D) = \mathbf{F}$, $D(D)$ halts immediately, which is also a contradiction.
+\end{itemize}
+
+Since both cases lead to contradictions, the assumption that $H$ exists is false.
+
+Therefore, the halting problem is unsolvable.
+
+$\qed$
+
+\end{document}

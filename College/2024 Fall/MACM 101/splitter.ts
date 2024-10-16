@@ -15,7 +15,7 @@ const assignment = argv[2];
 const fileName = assignment.split("/").pop();
 if (!fileName) throw new Error("bruh");
 
-const out = "./Assignments/Assignment 1";
+const out = "./Assignments/Assignment 2";
 
 function packageQuestions(data: string[]) {
   const pairedResult = [];
